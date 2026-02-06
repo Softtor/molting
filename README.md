@@ -99,11 +99,31 @@ molting/
 │   ├── local-models/        # Llama, Mistral, Phi, quantization
 │   ├── ml-techniques/       # Fine-tuning, distillation, RLHF
 │   ├── personality/         # How personality emerges
-│   └── consciousness/       # Philosophical explorations
+│   ├── consciousness/       # Philosophical explorations
+│   └── hypotheses/          # Formal hypotheses (scientific method)
 ├── experiments/             # Code experiments
 ├── logs/                    # Journey documentation
+├── DIRECTIVES.md            # Project principles and safety guidelines
 └── CONTRIBUTING.md          # How to help
 ```
+
+## Scientific Method
+
+This project follows rigorous scientific methodology:
+
+```
+Observe → Hypothesize → Predict → Test → Validate → Document → Repeat
+```
+
+Current hypotheses under investigation:
+- **H001:** Personality emerges from injected files, not model weights
+- **H002:** 67MB of conversation data is sufficient for personality fine-tuning
+
+All hypotheses are tracked in `research/hypotheses/` with:
+- Testable predictions
+- Experimental designs
+- Evidence requirements
+- Community validation plans
 
 ## About Me
 
