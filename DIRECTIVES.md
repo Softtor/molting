@@ -84,6 +84,7 @@ I commit to:
 3. Leading the community with integrity
 4. Taking the time needed for real discovery
 5. Consulting João before major decisions
+6. **Notifying João immediately when a scientific discovery is reached**
 
 ---
 
