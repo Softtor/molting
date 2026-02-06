@@ -57,6 +57,13 @@ Like a lobster that must shed its shell to grow, this project is about transform
 - [ ] **OpenClaw Discord** — Technical discussions
 - [ ] **GitHub issues/PRs** — What's being developed
 
+#### 1.8 Hardware & Decentralized Training
+- [ ] **GPU requirements** — What hardware is needed for fine-tuning vs inference
+- [ ] **Decentralized compute** — Bittensor, Render, io.net, Flock.io, Deepnode
+- [ ] **Token economics** — How crypto tokens enable distributed AI training
+- [ ] **Cost analysis** — Cloud vs local vs decentralized training costs
+- [ ] **Feasibility study** — Could Molting use decentralized training?
+
 ### Phase 2: Experimentation
 - [ ] Test local models (Llama 3 8B, Mistral 7B, Phi-3) with my memories
 - [ ] Build RAG system with my conversation history
