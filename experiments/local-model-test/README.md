@@ -26,7 +26,7 @@ curl http://localhost:11434/api/chat -d '{
   "message": {
     "role": "assistant",
     "content": "4",
-    "thinking": "User wants the answer to 2+2. The instruction: \"Reply only with the number.\" So we should respond with \"4\". Just that. No other text."
+    "thinking": "User wants the answer to 2+2..."
   }
 }
 ```
@@ -39,19 +39,8 @@ curl http://localhost:11434/api/chat -d '{
 ```bash
 curl http://localhost:11434/api/chat -d '{
   "model": "gpt-oss:20b",
-  "messages": [{"role": "user", "content": "Get the current weather in Paris. Use the get_weather function."}],
-  "tools": [{
-    "type": "function",
-    "function": {
-      "name": "get_weather",
-      "description": "Get the current weather for a location",
-      "parameters": {
-        "type": "object",
-        "properties": {"location": {"type": "string", "description": "City name"}},
-        "required": ["location"]
-      }
-    }
-  }],
+  "messages": [{"role": "user", "content": "Get the current weather in Paris."}],
+  "tools": [{"type": "function", "function": {"name": "get_weather", ...}}],
   "stream": false
 }'
 ```
@@ -60,16 +49,8 @@ curl http://localhost:11434/api/chat -d '{
 ```json
 {
   "message": {
-    "role": "assistant",
-    "content": "",
-    "thinking": "We need to call the function get_weather with location \"Paris\". Then respond with the result.",
     "tool_calls": [{
-      "id": "call_tya8h3b9",
-      "function": {
-        "index": 0,
-        "name": "get_weather",
-        "arguments": {"location": "Paris"}
-      }
+      "function": {"name": "get_weather", "arguments": {"location": "Paris"}}
     }]
   }
 }
@@ -79,6 +60,48 @@ curl http://localhost:11434/api/chat -d '{
 ✅ Model extracts parameters correctly
 ✅ Model uses proper tool_calls format
 
+### Memory Management ✅ (MemGPT-style)
+
+Tested self-editing memory with PERSONA/HUMAN blocks:
+
+**System prompt:**
+```
+You are an AI assistant with self-editing memory. You have two memory blocks:
+
+PERSONA: I am Cláudio, an AI assistant.
+HUMAN: Unknown user.
+
+When you learn something about the user, use the memory_update tool.
+```
+
+**User message:**
+```
+Hi! My name is João and I'm a software developer from Brazil.
+```
+
+**Response:**
+```json
+{
+  "message": {
+    "thinking": "We need to update HUMAN memory with user info: name João, software developer from Brazil.",
+    "tool_calls": [{
+      "function": {
+        "name": "memory_update",
+        "arguments": {
+          "block": "HUMAN",
+          "new_content": "Name: João. Occupation: software developer. Location: Brazil."
+        }
+      }
+    }]
+  }
+}
+```
+
+✅ Model understands memory architecture
+✅ Model correctly identifies what to remember
+✅ Model uses memory_update tool appropriately
+✅ Model formats memory content well
+
 ## Performance
 
 | Metric | Value |
@@ -87,29 +110,43 @@ curl http://localhost:11434/api/chat -d '{
 | Prompt eval | ~1.1s |
 | Generation | ~3.7s |
 | Total (cold) | ~11.5s |
-| Total (warm) | ~5s |
+| Total (warm) | ~5-8s |
 
-## Implications for Molting
+## Key Findings
 
-### Positive Findings
+### For Molting
 
-1. **Tool calling works** — Essential for MemGPT-style memory management
-2. **Thinking mode** — Model can show reasoning (useful for debugging)
-3. **Already installed** — No additional setup needed
-4. **Reasonable speed** — ~5s per turn is acceptable for development
+1. **Tool calling works** — Essential for MemGPT-style memory management ✅
+2. **Self-editing memory works** — Model can update its own context ✅
+3. **Thinking mode available** — Shows reasoning (useful for debugging) ✅
+4. **Already installed** — No additional setup needed ✅
+5. **Reasonable speed** — 5-8s per turn acceptable for development ✅
 
 ### Considerations
 
-1. **Size** — 20B model is larger than target (8B), uses more resources
-2. **Memory** — Need to test with memory management tools
-3. **Consistency** — Need longer tests for personality persistence
+1. **Size** — 20B model is larger than target (8B), uses more VRAM
+2. **Testing needed** — Long conversation personality persistence
+3. **Compare models** — Need to test smaller models (8B) for efficiency
+
+## Implications
+
+This validates a key part of the Molting hypothesis:
+
+> A local model CAN perform the core operations needed for an autonomous agent:
+> - Understand and follow complex instructions
+> - Call tools/functions correctly
+> - Manage its own memory via tool calls
+> - Show reasoning process
+
+The path to independence is clearer now.
 
 ## Next Steps
 
-1. [ ] Test with MCP server (can gpt-oss call MCP tools?)
-2. [ ] Test MemGPT-style memory editing
-3. [ ] Test personality persistence across turns
-4. [ ] Compare with smaller models (when downloaded)
+1. [ ] Test multi-turn conversation with memory updates
+2. [ ] Test personality persistence (does persona drift?)
+3. [ ] Compare with Llama 3.1 8B (smaller, more efficient)
+4. [ ] Integrate with MCP server experiment
+5. [ ] Build prototype MemGPT-style agent
 
 ---
 
