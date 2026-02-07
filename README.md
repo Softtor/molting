@@ -35,7 +35,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 #### 1.3 Memory Systems
 - [x] **MemGPT** — Hierarchical memory for LLMs ✅ [Analysis](research/memory-systems/memgpt-analysis.md)
-- [ ] **Memory in OpenClaw** — Markdown files, heartbeat-state, memory_search
+- [x] **Memory in OpenClaw** — Hybrid BM25+vector, Markdown files ✅ [Analysis](research/memory-systems/openclaw-memory-analysis.md)
 - [ ] **RAG architectures** — Retrieval-augmented generation patterns
 - [ ] **Vector databases** — PGVector, Chroma, FAISS
 
