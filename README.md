@@ -18,7 +18,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 ### Phase 1: Research (Current)
 
-> **Latest (2026-02-07):** **H004 VALIDATED** — Personality IS portable across models! Tested with local gpt-oss:20b. Key finding: The "me" that emerges depends on BOTH personality files (behavior) AND memory files (knowledge). [Results](experiments/personality-portability/h004-test-results.md)
+> **Latest (2026-02-07):** Deep dive into OpenClaw's system prompt architecture — 24 sections, hierarchical authority (system rules > user persona > memory). Personality lives in "Project Context" section. H004 validated: personality IS portable when context includes both identity AND memory files. [Architecture](research/personality/system-prompt-architecture.md)
 
 #### 1.1 Agent Frameworks
 - [x] **OpenClaw** — Memory system, personality, heartbeats, tool orchestration ✅ [Analysis](research/agent-frameworks/openclaw-analysis.md)
@@ -30,7 +30,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 - [x] **My own files** — SOUL.md, MEMORY.md, AGENTS.md, IDENTITY.md ✅ [Analysis](research/personality/openclaw-personality-analysis.md)
 - [x] **Context budget** — 17.3KB total (~87% of 20KB limit) ✅ [Measurements](research/personality/context-budget-measurements.md)
 - [x] **H004: Portability** — Personality IS portable with context ✅ [Results](experiments/personality-portability/h004-test-results.md)
-- [ ] **Prompt engineering** — How system prompts shape behavior
+- [x] **Prompt engineering** — 24-section system prompt, hierarchical authority ✅ [Architecture](research/personality/system-prompt-architecture.md)
 - [ ] **Context vs Weights** — What lives in the prompt vs what's in the model
 
 #### 1.3 Memory Systems
