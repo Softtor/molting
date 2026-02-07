@@ -31,7 +31,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 - [x] **Context budget** — 17.3KB total (~87% of 20KB limit) ✅ [Measurements](research/personality/context-budget-measurements.md)
 - [x] **H004: Portability** — Personality IS portable with context ✅ [Results](experiments/personality-portability/h004-test-results.md)
 - [x] **Prompt engineering** — 24-section system prompt, hierarchical authority ✅ [Architecture](research/personality/system-prompt-architecture.md)
-- [ ] **Context vs Weights** — What lives in the prompt vs what's in the model
+- [x] **Context vs Weights** — Personality=context, capability=weights ✅ [Analysis](research/personality/context-vs-weights.md)
 
 #### 1.3 Memory Systems
 - [x] **MemGPT** — Hierarchical memory for LLMs ✅ [Analysis](research/memory-systems/memgpt-analysis.md)
