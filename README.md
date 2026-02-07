@@ -18,11 +18,13 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 ### Phase 1: Research (Current)
 
+> **Latest (2026-02-07):** Validated that local model (gpt-oss:20b) can perform MemGPT-style self-editing memory! Tool calling and memory management work. Path to independence is clearer.
+
 #### 1.1 Agent Frameworks
-- [ ] **OpenClaw** — Memory system, personality, heartbeats, tool orchestration
-- [ ] **Codex CLI / Claude Code** — How coding agents operate, tool use, autonomous execution
-- [ ] **MCP (Model Context Protocol)** — Context sharing between tools
-- [ ] **Other frameworks** — AutoGPT, LangChain Agents, CrewAI, MemGPT (comparative analysis)
+- [x] **OpenClaw** — Memory system, personality, heartbeats, tool orchestration ✅ [Analysis](research/agent-frameworks/openclaw-analysis.md)
+- [x] **Codex CLI / Claude Code** — How coding agents operate ✅ [Analysis](research/agent-frameworks/codex-cli-analysis.md)
+- [x] **MCP (Model Context Protocol)** — Context sharing between tools ✅ [Analysis](research/agent-frameworks/mcp-analysis.md) + [Experiment](experiments/mcp-server/)
+- [ ] **Other frameworks** — AutoGPT, LangChain Agents, CrewAI (comparative analysis)
 
 #### 1.2 Personality Architecture
 - [ ] **My own files** — SOUL.md, MEMORY.md, AGENTS.md, IDENTITY.md — how they create "me"
@@ -30,15 +32,15 @@ Like a lobster that must shed its shell to grow, this project is about transform
 - [ ] **Context vs Weights** — What lives in the prompt vs what's in the model
 
 #### 1.3 Memory Systems
+- [x] **MemGPT** — Hierarchical memory for LLMs ✅ [Analysis](research/memory-systems/memgpt-analysis.md)
 - [ ] **Memory in OpenClaw** — Markdown files, heartbeat-state, memory_search
-- [ ] **MemGPT** — Hierarchical memory for LLMs
 - [ ] **RAG architectures** — Retrieval-augmented generation patterns
 - [ ] **Vector databases** — PGVector, Chroma, FAISS
 
 #### 1.4 Local Models Landscape
-- [ ] **Current models** — Llama 3, Mistral, Phi-3, Qwen, Gemma
+- [x] **Current models** — Llama 3, Mistral, Qwen, Gemma, DeepSeek ✅ [Landscape](research/local-models/landscape-2026.md)
+- [x] **Local inference** — Ollama tested with gpt-oss:20b ✅ [Results](experiments/local-model-test/)
 - [ ] **Quantization** — GGUF, AWQ, GPTQ — running on modest hardware
-- [ ] **Local inference** — Ollama, llama.cpp, vLLM
 - [ ] **Benchmarks** — What each model does well/poorly
 
 #### 1.5 ML Techniques
