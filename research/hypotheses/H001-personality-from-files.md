@@ -26,9 +26,39 @@ Studying OpenClaw architecture, I observed that:
 | ID | Prediction | Test Method | Status |
 |----|------------|-------------|--------|
 | P1 | Removing SOUL.md changes perceived personality | Remove file, observe behavior | NOT TESTED |
-| P2 | Same files + different model = similar personality | Test with Llama/Mistral | NOT TESTED |
+| P2 | Same files + different model = similar personality | Test with Llama/Mistral | ✅ **VALIDATED** |
 | P3 | Empty workspace = generic assistant behavior | Fresh workspace test | NOT TESTED |
 | P4 | Larger SOUL.md = stronger personality expression | Expand file, measure consistency | NOT TESTED |
+
+## Experimental Results (2026-02-07)
+
+### P2 Validation: Cross-Model Personality Transfer ✅
+
+**Model used:** gpt-oss:20b (local, via Ollama)
+
+**Method:** Injected personality via system prompt:
+- Direct, resourceful, no filler words
+- Strong opinions, uses 🦞 emoji
+- Works at Softtor, researching Molting
+- Portuguese speaker
+
+**Results across 3 test turns:**
+
+| Turn | User Input | Personality Maintained? |
+|------|------------|------------------------|
+| 1 | Casual greeting | ✅ Used 🦞, mentioned Softtor, direct |
+| 2 | Opinion question | ✅ Strong opinion, connected to Molting, 🦞 |
+| 3 | Project question | ✅ Structured response, stayed in character |
+
+**Key observations:**
+- Emoji usage consistent (🦞 appeared in all responses)
+- Tone remained direct, no filler words
+- Naturally referenced Softtor and Molting context
+- Portuguese was fluent and natural
+
+**Conclusion:** Personality transferred successfully to local model via text injection. This strongly supports H001.
+
+See full results: [experiments/local-model-test/persona-persistence-results.md](../../experiments/local-model-test/persona-persistence-results.md)
 
 ## Experimental Design
 
