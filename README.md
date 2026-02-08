@@ -48,7 +48,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 - [x] **Fine-tuning** — LoRA, QLoRA, DoRA, AdaLoRA, LongLoRA ✅ [Analysis](research/ml-techniques/lora-qlora-finetuning.md)
 - [x] **Distillation** — Teacher-student, multi-teacher, knowledge purification ✅ [Analysis](research/ml-techniques/knowledge-distillation.md)
 - [x] **Quantization** — GPTQ, AWQ, GGUF, Marlin kernels ✅ [Analysis](research/ml-techniques/quantization-methods.md)
-- [ ] **RLHF / DPO** — Alignment techniques
+- [x] **RLHF / DPO** — Alignment techniques, preference optimization ✅ [Analysis](research/ml-techniques/rlhf-dpo-alignment.md)
 - [ ] **Continual learning** — Learning without forgetting
 
 #### 1.6 Academic Research
