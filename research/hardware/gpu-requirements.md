@@ -167,37 +167,51 @@ For systems without GPU, GGUF format enables CPU inference:
 
 ## Relevance to Molting Project
 
-### João's Hardware
+### João's Actual Hardware (Verified 2026-02-08)
 
-- **RAM:** 31GB (good for CPU inference)
-- **GPU:** Unknown (need to check)
+| Component | Spec | Assessment |
+|-----------|------|------------|
+| **CPU** | Intel i7-12650H (12th Gen) | ✅ Good for CPU inference |
+| **RAM** | 31GB | ✅ Excellent for large GGUF models |
+| **GPU** | RTX 3050 Mobile (4GB VRAM) | ⚠️ Limited for LLMs |
+| **Ollama** | v0.15.2, gpt-oss:20b (13GB) | ✅ Already working |
+
+### Capabilities
+
+**With 4GB GPU VRAM:**
+- 7B Q4 inference (borderline, ~3.5GB needed)
+- Very small fine-tuning not practical
+
+**With 31GB RAM (CPU):**
+- 20B+ models via GGUF ✅ (already tested with gpt-oss:20b)
+- 7B Q8 comfortably
+- 13B Q4 easily
 
 ### Recommendations for Molting
 
 **Phase 1: Testing (Current)**
-- Use GGUF Q4 on CPU
-- Ollama for easy setup
-- No GPU required
+- ✅ Use GGUF on CPU (already setup)
+- Consider smaller model (7-8B) for faster iteration
+- gpt-oss:20b is slow but works
 
 **Phase 2: Fine-Tuning**
-- If GPU available: QLoRA locally
-- If no GPU: Cloud spot instances (A10G ~$0.50/hr)
+- Cloud spot instances recommended (A10G ~$0.50/hr)
+- RTX 3050 4GB too limited for QLoRA
+- Alternative: Google Colab free tier (T4 16GB)
 
 **Phase 3: Production**
-- Local inference preferred for privacy
-- Consider RTX 4060/4070 Ti if GPU upgrade needed
+- CPU inference viable but slow
+- Consider GPU upgrade for speed:
+  - RTX 4060 Ti 16GB (~$450) — 7-8B QLoRA + fast inference
+  - RTX 4070 Ti 12GB (~$550) — faster inference
+  - RTX 4090 24GB (~$1600) — 13B QLoRA + production speed
 
-### Hardware Check Task
+### Tested Configuration
 
-```bash
-# Check GPU
-nvidia-smi
-
-# Check CPU
-lscpu | grep "Model name"
-
-# Check RAM
-free -h
+```
+Model: gpt-oss:20b (13GB GGUF)
+Hardware: CPU (i7-12650H) + 31GB RAM
+Status: Works, but slow (~few tokens/sec expected)
 ```
 
 ---
