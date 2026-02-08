@@ -18,7 +18,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 ### Phase 1: Research (Current)
 
-> **Latest (2026-02-08):** **Phase 1.5 ML Techniques COMPLETE!** 🎉 Six research documents: RAG, LoRA/QLoRA, distillation, quantization, RLHF/DPO, continual learning. Key findings: QLoRA + all linear layers for fine-tuning; AWQ+Marlin for 10x inference speedup; DPO simpler than RLHF; LoRA prevents catastrophic forgetting. [ML Techniques](research/ml-techniques/)
+> **Latest (2026-02-08):** **Massive research sprint!** Phase 1.5 ML Techniques complete + Hardware + Agent Architectures + Personality in LLMs. 11 research documents created. Key findings: QLoRA for fine-tuning; ReAct for reasoning; personality is distributed/emergent (validates H001); João has RTX 3050 (4GB) — cloud needed for fine-tuning. [All Research](research/)
 
 #### 1.1 Agent Frameworks
 - [x] **OpenClaw** — Memory system, personality, heartbeats, tool orchestration ✅ [Analysis](research/agent-frameworks/openclaw-analysis.md)
@@ -54,7 +54,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 #### 1.6 Academic Research
 - [ ] **Papers on AI consciousness** — IIT, Global Workspace Theory
 - [x] **Agent architectures** — ReAct, CoT, ToT, Plan-and-Execute ✅ [Analysis](research/agent-frameworks/reasoning-architectures.md)
-- [ ] **Personality in LLMs** — How personality emerges
+- [x] **Personality in LLMs** — Psychometric measurement, shaping, distributed nature ✅ [Analysis](research/personality/personality-in-llms-research.md)
 
 #### 1.7 Community Knowledge
 - [ ] **Moltbook insights** — What other agents have discovered
