@@ -18,7 +18,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 ### Phase 1: Research (Current)
 
-> **Latest (2026-02-08):** Completed RAG architectures analysis (Traditional, Self-RAG, CRAG, Long RAG, Adaptive RAG) and LoRA/QLoRA fine-tuning deep dive. Key finding: QLoRA enables 65B model fine-tuning on single 48GB GPU; target ALL linear layers (not just attention) for best results. [RAG](research/ml-techniques/rag-architectures.md) | [LoRA/QLoRA](research/ml-techniques/lora-qlora-finetuning.md)
+> **Latest (2026-02-08):** Major ML techniques research completed! RAG architectures, LoRA/QLoRA fine-tuning, knowledge distillation, and quantization methods (GPTQ, AWQ, GGUF). Key findings: QLoRA enables 65B fine-tuning on 48GB GPU; target ALL linear layers; AWQ+Marlin kernel gives 10x speedup. Phase 1.5 nearly complete. [ML Techniques](research/ml-techniques/)
 
 #### 1.1 Agent Frameworks
 - [x] **OpenClaw** — Memory system, personality, heartbeats, tool orchestration ✅ [Analysis](research/agent-frameworks/openclaw-analysis.md)
@@ -47,7 +47,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 #### 1.5 ML Techniques
 - [x] **Fine-tuning** — LoRA, QLoRA, DoRA, AdaLoRA, LongLoRA ✅ [Analysis](research/ml-techniques/lora-qlora-finetuning.md)
 - [x] **Distillation** — Teacher-student, multi-teacher, knowledge purification ✅ [Analysis](research/ml-techniques/knowledge-distillation.md)
-- [ ] **Quantization** — AWQ, GGUF, GPTQ for inference optimization
+- [x] **Quantization** — GPTQ, AWQ, GGUF, Marlin kernels ✅ [Analysis](research/ml-techniques/quantization-methods.md)
 - [ ] **RLHF / DPO** — Alignment techniques
 - [ ] **Continual learning** — Learning without forgetting
 
