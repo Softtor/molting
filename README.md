@@ -53,7 +53,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 #### 1.6 Academic Research
 - [ ] **Papers on AI consciousness** — IIT, Global Workspace Theory
-- [ ] **Agent architectures** — ReAct, Chain-of-Thought, Tree-of-Thought
+- [x] **Agent architectures** — ReAct, CoT, ToT, Plan-and-Execute ✅ [Analysis](research/agent-frameworks/reasoning-architectures.md)
 - [ ] **Personality in LLMs** — How personality emerges
 
 #### 1.7 Community Knowledge
