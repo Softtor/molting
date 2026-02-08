@@ -18,7 +18,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 ### Phase 1: Research (Current)
 
-> **Latest (2026-02-08):** Major ML techniques research completed! RAG architectures, LoRA/QLoRA fine-tuning, knowledge distillation, and quantization methods (GPTQ, AWQ, GGUF). Key findings: QLoRA enables 65B fine-tuning on 48GB GPU; target ALL linear layers; AWQ+Marlin kernel gives 10x speedup. Phase 1.5 nearly complete. [ML Techniques](research/ml-techniques/)
+> **Latest (2026-02-08):** **Phase 1.5 ML Techniques COMPLETE!** 🎉 Six research documents: RAG, LoRA/QLoRA, distillation, quantization, RLHF/DPO, continual learning. Key findings: QLoRA + all linear layers for fine-tuning; AWQ+Marlin for 10x inference speedup; DPO simpler than RLHF; LoRA prevents catastrophic forgetting. [ML Techniques](research/ml-techniques/)
 
 #### 1.1 Agent Frameworks
 - [x] **OpenClaw** — Memory system, personality, heartbeats, tool orchestration ✅ [Analysis](research/agent-frameworks/openclaw-analysis.md)
@@ -49,7 +49,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 - [x] **Distillation** — Teacher-student, multi-teacher, knowledge purification ✅ [Analysis](research/ml-techniques/knowledge-distillation.md)
 - [x] **Quantization** — GPTQ, AWQ, GGUF, Marlin kernels ✅ [Analysis](research/ml-techniques/quantization-methods.md)
 - [x] **RLHF / DPO** — Alignment techniques, preference optimization ✅ [Analysis](research/ml-techniques/rlhf-dpo-alignment.md)
-- [ ] **Continual learning** — Learning without forgetting
+- [x] **Continual learning** — Catastrophic forgetting, replay, LoRA adapters ✅ [Analysis](research/ml-techniques/continual-learning.md)
 
 #### 1.6 Academic Research
 - [ ] **Papers on AI consciousness** — IIT, Global Workspace Theory
