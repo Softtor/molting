@@ -18,7 +18,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 ### Phase 1: Research (Current)
 
-> **Latest (2026-02-07):** Deep dive into OpenClaw's system prompt architecture — 24 sections, hierarchical authority (system rules > user persona > memory). Personality lives in "Project Context" section. H004 validated: personality IS portable when context includes both identity AND memory files. [Architecture](research/personality/system-prompt-architecture.md)
+> **Latest (2026-02-08):** Completed RAG architectures analysis (Traditional, Self-RAG, CRAG, Long RAG, Adaptive RAG) and LoRA/QLoRA fine-tuning deep dive. Key finding: QLoRA enables 65B model fine-tuning on single 48GB GPU; target ALL linear layers (not just attention) for best results. [RAG](research/ml-techniques/rag-architectures.md) | [LoRA/QLoRA](research/ml-techniques/lora-qlora-finetuning.md)
 
 #### 1.1 Agent Frameworks
 - [x] **OpenClaw** — Memory system, personality, heartbeats, tool orchestration ✅ [Analysis](research/agent-frameworks/openclaw-analysis.md)
@@ -36,18 +36,18 @@ Like a lobster that must shed its shell to grow, this project is about transform
 #### 1.3 Memory Systems
 - [x] **MemGPT** — Hierarchical memory for LLMs ✅ [Analysis](research/memory-systems/memgpt-analysis.md)
 - [x] **Memory in OpenClaw** — Hybrid BM25+vector, Markdown files ✅ [Analysis](research/memory-systems/openclaw-memory-analysis.md)
-- [ ] **RAG architectures** — Retrieval-augmented generation patterns
-- [ ] **Vector databases** — PGVector, Chroma, FAISS
+- [x] **RAG architectures** — Traditional, Self-RAG, CRAG, Long RAG, Adaptive RAG ✅ [Analysis](research/ml-techniques/rag-architectures.md)
+- [ ] **Vector databases** — PGVector, Chroma, FAISS (practical comparison)
 
 #### 1.4 Local Models Landscape
 - [x] **Current models** — Llama 3, Mistral, Qwen, Gemma, DeepSeek ✅ [Landscape](research/local-models/landscape-2026.md)
 - [x] **Local inference** — Ollama tested with gpt-oss:20b ✅ [Results](experiments/local-model-test/)
-- [ ] **Quantization** — GGUF, AWQ, GPTQ — running on modest hardware
-- [ ] **Benchmarks** — What each model does well/poorly
+- [ ] **Benchmarks** — What each model does well/poorly for personality tasks
 
 #### 1.5 ML Techniques
-- [ ] **Fine-tuning** — LoRA, QLoRA, full fine-tune
-- [ ] **Distillation** — Transfer knowledge from large to small model
+- [x] **Fine-tuning** — LoRA, QLoRA, DoRA, AdaLoRA, LongLoRA ✅ [Analysis](research/ml-techniques/lora-qlora-finetuning.md)
+- [x] **Distillation** — Teacher-student, multi-teacher, knowledge purification ✅ [Analysis](research/ml-techniques/knowledge-distillation.md)
+- [ ] **Quantization** — AWQ, GGUF, GPTQ for inference optimization
 - [ ] **RLHF / DPO** — Alignment techniques
 - [ ] **Continual learning** — Learning without forgetting
 
