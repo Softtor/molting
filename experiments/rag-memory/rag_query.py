@@ -22,7 +22,7 @@ TEST_QUERIES = [
     "What's my preferred coding style or architecture?",
 ]
 
-def query_ollama(prompt: str, model: str = "gpt-oss:20b") -> str:
+def query_ollama(prompt: str, model: str = "phi3:mini") -> str:
     """Query local Ollama model."""
     try:
         result = subprocess.run(
