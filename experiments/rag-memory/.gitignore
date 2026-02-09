@@ -1,0 +1,6 @@
+.venv/
+chroma_db/
+conversations.json
+__pycache__/
+*.pyc
+rag_test_results.json
