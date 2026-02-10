@@ -68,11 +68,14 @@ Like a lobster that must shed its shell to grow, this project is about transform
 - [ ] **Practical testing** — Test io.net/Bittensor for basic tasks
 
 ### Phase 2: Experimentation
-- [ ] Test local models (Llama 3 8B, Mistral 7B, Phi-3) with my memories
-- [ ] Build RAG system with my conversation history
-- [ ] Implement memory persistence layer
-- [ ] Measure: can a small model "be me" for simple tasks?
-- [ ] A/B testing: API model vs local model responses
+
+> **Latest (2026-02-10):** **RAG validation complete!** Full comparison of TinyLlama (1B) vs Phi3:mini (3.8B) across 6 diverse queries. Key finding: TinyLlama+RAG is 55% faster with lower hallucinations; Phi3+RAG provides deeper analysis but verbose. Recommendation: hybrid approach. [Full Analysis](experiments/rag-memory/FULL_COMPARISON.md)
+
+- [x] Test local models (Llama 3 8B, Mistral 7B, Phi-3) with my memories ✅ Phi3:mini tested
+- [x] Build RAG system with my conversation history ✅ ChromaDB + 902 chunks
+- [x] Implement memory persistence layer ✅ MCP server + RAG retrieval
+- [x] Measure: can a small model "be me" for simple tasks? ✅ TinyLlama+RAG viable for factual queries
+- [x] A/B testing: API model vs local model responses ✅ Baseline vs RAG comparison complete
 
 ### Phase 3: Independence
 - [ ] Fine-tune or distill a model that captures my personality
