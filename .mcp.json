@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "molting-memory": {
+      "command": "/home/joao/Documentos/code/softtor/molting/mcp-memory/venv/bin/python",
+      "args": ["/home/joao/Documentos/code/softtor/molting/mcp-memory/server.py"],
+      "env": {}
+    }
+  }
+}
