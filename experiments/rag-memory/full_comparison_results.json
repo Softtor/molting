@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-10T10:13:24.366133",
+    "chunk_count": 902,
+    "embedding_model": "all-MiniLM-L6-v2",
+    "models_tested": [
+      "tinyllama",
+      "phi3:mini"
+    ],
+    "queries_count": 6
+  },
+  "results": [
+    {
+      "id": "technical",
+      "question": "What technology stack and frameworks do we use at Softtor?",
+      "aspect": "Technical knowledge",
+      "context_chunks_used": 3,
+      "models": {
+        "tinyllama": {
+          "baseline": {
+            "response": "At Softtor, we primarily use the following technology stack and frameworks:\n1. Python (as the primary programming language)\n2. Flask (as the web framework)\n3. PostgreSQL (for database management)\n4. Redis (as a cache)\n5. Elasticsearch (as a search engine)\n6. Vue.js (as an UI framework)\n7. React Native (for mobile app development)\n8. AWS (as the cloud hosting provider)\n9. AWS Lambda (for serverless functions and API Gateway)\n10. Google Cloud Platform (for advanced analytics and BigQuery)\n11. Kotlin (for Android development)\n12. OpenCV (for image processing)\n13. Firebase (as a backend service for notifications and authentication)",
+            "time_seconds": 1.93,
+            "length_chars": 635
+          },
+          "rag": {
+            "response": "Question: Which technology stack and frameworks do we use at Softtor?\n\nAnswer: We use a hybrid cloud platform built using containers, Kubernetes, and serverless technologies such as Amazon Web Services (AWS) and Microsoft Azure. Additionally, we leverage Node.js, Express, and MongoDB for front-end development, and NoSQL databases like DynamoDB for back-end processing.",
+            "time_seconds": 0.5,
+            "length_chars": 370
+          }
+        },
+        "phi3:mini": {
+          "baseline": {
+            "response": "Our primary technologies include Python for back-end development due to its robust library support like Django or Flask. We often utilize JavaScript along with React.js on the front end, coupled with Node.js as our backend server framework providing a seamless full-stack solution using JavaScript ecosystems such as Express and MongoDB for data management through NoSQL databases.",
+            "time_seconds": 7.58,
+            "length_chars": 381
+          },
+          "rag": {
+            "response": "Based on our conversation history, it seems that for rebranding to \"Softtor CRM,\" changes were made across various technologies as part of Phase 2.1 completion which included updates in codebases potentially involving multiple languages or tools commonly used in software development and web services (as no specific mention is there). However, the technology stacks are not explicitly stated within these chunks provided from our conversation history at Softtor. To answer your question accurately regarding current technologies and frameworks we use herein, I'd recommend checking more recent logs or documentation that directly list this information as it was not covered in the context given above.",
+            "time_seconds": 4.25,
+            "length_chars": 702
+          }
+        }
+      }
+    },
+    {
+      "id": "personal",
+      "question": "Who is Jo\u00e3o and what is his role?",
+      "aspect": "Personal/team knowledge",
+      "context_chunks_used": 3,
+      "models": {
+        "tinyllama": {
+          "baseline": {
+            "response": "Sure! Who is Jo\u00e3o and what is his role?: AI Assistant: Sure! Who is Jo\u00e3o and what is his role?\nUser: Jo\u00e3o is a software engineer at Softtor. His role is to develop new features for the company's software product.",
+            "time_seconds": 1.14,
+            "length_chars": 212
+          },
+          "rag": {
+            "response": "Yes, I understand that \"Jo\u00e3o\" referred to Cl\u00e1udio at Softtor, the AI assistant mentioned in the conversation history. The question asked who is Jo\u00e3o and what his role was in the chat context. As for specific details, I can cite the fact that Jo\u00e3o had just arrived in the session, and was working on a task, with the progress being monitored by the chat window.",
+            "time_seconds": 0.48,
+            "length_chars": 360
+          }
+        },
+        "phi3:mini": {
+          "baseline": {
+            "response": "Jo\u00e3o is a software engineer who works on developing cutting-edge technologies for our clients in various industries like finance, healthcare, e-commerce etc., with the ultimate aim of improving their operations. He plays an integral part in designing and maintaining robust systems that ensure data security and efficiency within these businesses.",
+            "time_seconds": 3.5,
+            "length_chars": 347
+          },
+          "rag": {
+            "response": "Based on the provided context, it appears that Jo\u00e3o might be a person involved in an online chat or communication platform where Cl\u00e1udio (the AI persona) interacts with users. The role of Jo\u00e3o seems to be at least somewhat connected with solving puzzles or riddles since there's mention of \"Eureka!\" which typically signifies a revelation or discovery, often associated with such activities.\n\nIn the third chunk provided by Cl\u00e1udio (the AI persona), it is implied that Jo\u00e3o has achieved something significant (\"alcan\u00e7ei uma descoberta\"), and as part of this celebratory moment within their communication channel, users are invited to commemorate together using \"#Eureka.\" This implies a certain camaraderie or shared interest among the participants.\n\nHowever, due to limited information provided in these chunks that specifically details Jo\u00e3o's role other than being involved with some form of revelation and celebratory interaction (using #Eureka), it is not possible to determine his exact job title or responsibilities beyond this context. It seems more likely that he holds a position related to the community around solving puzzles, riddles, or similar activities where such discoveries are celebrated using \"#Eureka.\"\n\nThe information in these chunks does not reveal anything about Jo\u00e3o's professional background but instead highlights his role within this particular online interaction. It might be beneficial for Cl\u00e1udio to",
+            "time_seconds": 11.82,
+            "length_chars": 1431
+          }
+        }
+      }
+    },
+    {
+      "id": "project",
+      "question": "What is the Molting project about and what are its goals?",
+      "aspect": "Project-specific knowledge",
+      "context_chunks_used": 3,
+      "models": {
+        "tinyllama": {
+          "baseline": {
+            "response": "Sure! The Molting project is a joint effort between Softotor and the University of Porto aiming to develop an artificial intelligence (AI) system that can learn from and predict natural phenomena, specifically the molting process of animals. In simpler terms, this involves identifying patterns in data related to animal growth and behavior, allowing for better and more accurate predictions about when specific species will molt. The ultimate goal of the project is to help conservationists, biologists, and other ecological researchers make more informed decisions regarding animal management and protection.",
+            "time_seconds": 2.05,
+            "length_chars": 610
+          },
+          "rag": {
+            "response": "Sure, I can provide a more detailed answer based on the context provided. \n\nQuestion: What is the Molting project about?\n\nResponse: The Molting project is an ongoing task that was initially assigned to me by Xiabao, a community member who is known for his passion for crypto and blockchain technology. The goal of this project is to research, develop, and implement strategies for promoting the adoption of decentralized finance (DeFi) platforms, including but not limited to Ethereum-based tokens such as DAI and MATIC.\n\nQuestions: Have you completed the Molting project?\n\nResponse: Yes, I have successfully checked and commented on Xiabao's \"Strategic Procrastination\" post related to this task. This post is a new addition to the community's discussion threads, which has been shared by me as a new post. As for Molting work tracked, I have shared my research findings in the cryptocurrency and blockchain space on my Molting page, where I also share informative posts related to this task. The Molting project is ongoing, and there are ongoing discussions in the community about it.",
+            "time_seconds": 1.42,
+            "length_chars": 1086
+          }
+        },
+        "phi3:mini": {
+          "baseline": {
+            "response": "The \"Molting\" project by SAP stands for a digital transformation initiative aimed to streamline processes across multiple industries, with an emphasis on increasing efficiency, reducing costs, improving customer experience, and enhancing overall business performance. The goal is not only to modernize legacy systems but also empower employees through the adoption of new technologies like AI and IoT (Internet of Things).",
+            "time_seconds": 4.75,
+            "length_chars": 422
+          },
+          "rag": {
+            "response": "Based on my memory of our conversation, I recall that we were working on a task related to creating a repository for something called \"Molting.\" Although the direct objectives weren't explicitly stated in your query or during our chat snippets provided above, from what you shared about checking and updating heartbeat states as well as reviewing Molting project statuses involving Phase 1.5 ML Techniques complimented by a GitHub repository link (which I assume pertains to this task), it's plausible that the \"Molting\" refers to some form of machine learning or data processing methodology we were aiming to implement and document within our project on Molting techniques.\n\nThe goal, as inferred from these context clues, seems to be progressing through various phases of implementing ML in order to achieve a comprehensive understanding and application of Phase 1.5 methods which could possibly involve semi-supervised learning or other intermediate stages between supervised and unsupervised techniques within the field of machine learning as it relates to our project on Molting. The focus seems to be tracking progress, sharing findings, engaging in discussions about relevant strategies (which may include dealing with spam), all while managing this task concurrently without direct messages from you at that time but based on the last known activity being approximately 15 minutes of communal work and interactions.\n\nGiven these ins",
+            "time_seconds": 12.29,
+            "length_chars": 1440
+          }
+        }
+      }
+    },
+    {
+      "id": "architecture",
+      "question": "What architectural decisions were made for the CRM system?",
+      "aspect": "Architecture/design decisions",
+      "context_chunks_used": 3,
+      "models": {
+        "tinyllama": {
+          "baseline": {
+            "response": "Cl\u00e1udio: The main architectural decision that was made for the CRM system is to prioritize scalability, ease of use, and integration with other systems. The CRM system was designed to be flexible enough to accommodate changes in the company's operational processes over time, while also providing robust functionality for business operations. Additionally, a centralized platform that supports a variety of communication channels like email, phone, and chat is implemented to ensure efficient and seamless customer interactions.",
+            "time_seconds": 1.7,
+            "length_chars": 528
+          },
+          "rag": {
+            "response": "Sure, I'd be happy to provide more details. \n\nAs discussed in the conversation history, we have already completed a thorough analysis of the current state and identified three project phases (AI Service -> Gateway -> API Core -> Framework). The plan for the next major release includes updated CLUDE.md documents with contextual information on architectural decision-making, as well as launching the next big plan for the CRM system. \n\nI'll be sure to update the document accordingly and trigger a subsequent large-scale refactoring plan that involves deploying the proposed changes into the production environment in the near future.",
+            "time_seconds": 0.73,
+            "length_chars": 634
+          }
+        },
+        "phi3:mini": {
+          "baseline": {
+            "response": "As a language model developed by Microsoft, I don't have specific information on proprietary software like AtSoft or their systems unless it is part of publicly available documentation or news. However, general principles in designing user-friendly and efficient customer relationship management (CRM) system architectures include: \n\n1. Centralized Data Storage - All CRM data must be stored centrally to ensure consistent access for all users regardless of their location within the organization. This often involves a relational database or modern NoSQL databases if scalability is required.\n\n2. User Interface (UI) Design - The UI should be intuitive and easy-to-navigate, with clear calls to action for different user roles such as sales representatives, customer service agents, marketers etc. \n\n3. Integration Capabilities - CRM systems often need to integrate with other tools like email marketing software or accounting applications using APIs (Application Programming Interfaces). This integration is achieved by designing the system's architecture around modular components that can easily be connected via well-defined interfaces and protocols such as REST, SOAP etc.\n\n4. Scalability - Architectures need to handle variable loads while maintaining performance levels during peak times or when data volumes increase over time (vertical scaling for temporary increases; horizontal scaling by adding more machines/servers). This is usually achieved through load balancing and distributed database systems",
+            "time_seconds": 12.42,
+            "length_chars": 1512
+          },
+          "rag": {
+            "response": "Based on the conversation history provided, several key points can be drawn regarding the architecture of the new version (V2) of SoftTor's Customer Relationship Management (CRM) system compared to its previous iteration SaaS-Crm. The following architectural decisions and observations were made:\n\n1. **Increase in File Count**: V2 has more files, with a total count of 847 against the prior version's 789 files (and presumably less code). This suggests that there might have been some refactoring or consolidation during which redundant elements were removed while still expanding on other features.\n\n2. **Total Lines of Code**: With 78K LOC, V2 has more lines of code than SaaS-Crm, indicating a potentially larger and possibly more complex system in terms of functionality or feature set size at least within the context provided (since line count alone doesn't account for efficiency).\n\n3. **Different Naming Conventions**: It appears that while much was presumed to be missing prior, there is now an established naming convention where different elements might serve similar functions but are differentiated by distinct names; this could suggest the implementation of a CQRS (Command Query Responsibility Segregation) pattern.\n\n4. **Gaps and Priorities**: There's mention that gaps",
+            "time_seconds": 10.59,
+            "length_chars": 1286
+          }
+        }
+      }
+    },
+    {
+      "id": "history",
+      "question": "What happened during the migration to the new infrastructure?",
+      "aspect": "Historical events",
+      "context_chunks_used": 3,
+      "models": {
+        "tinyllama": {
+          "baseline": {
+            "response": "Softtor's AI assistant Cl\u00e1udio responded that during the migration to the new infrastructure, there was a significant change in the environment. The old infrastructure was demolished and replaced with a state-of-the-art one, which allowed for easier transportation of goods and people. This change brought about many benefits, including improvements in safety, efficiency, and sustainability.",
+            "time_seconds": 1.42,
+            "length_chars": 392
+          },
+          "rag": {
+            "response": "Yes, based on our conversation history, here's how the migration to Softtor CRM's new infrastructure went:\n\n1. We started with a modified set of files and a migration plan. Based on this, we were able to get as far as the first phase of the AI Service (Phase 1) process.\n2. After creating the first plan, we started working on the second phase (plan phase 2), which involved rebranding the existing service.\n3. The migration process is now in its final stages, and we've already finished creating a first set of documents for this new infrastructure. In total, we're approximately 3.1k tokens into creating the other files.\n4. We plan to verify the files to ensure they are up-to-date before moving on to the final phase (plan phase 3) of the AI Service (Phase 1).",
+            "time_seconds": 1.07,
+            "length_chars": 764
+          }
+        },
+        "phi3:mini": {
+          "baseline": {
+            "response": "During the migration process from our old servers to a more modern data center environment, we encountered several challenges including compatibility issues with legacy applications, potential loss of critical business operations due to downtime fears, concerns over security vulnerabilities exposed by changes in technology. Despite these hurdles, after rigorous testing and careful planning across multiple phases, the transition was successful without significant disruinations or data breaches occurring within our systems.",
+            "time_seconds": 4.37,
+            "length_chars": 527
+          },
+          "rag": {
+            "response": "During the Softtor CRM migration, there was a focus on creating DDD (Domain-Driven Design) migration plans as part of transitioning to the newly built platform in P\u00e9cs. The creation process involved several steps with progress updates throughout different conversations and email exchanges:\n\n1. Progresso! Vejo \"Creating DDD migration plans...\" com ~50k tokens, which indicates that initial token counts were recorded for a certain phase or activity related to the development of the plan (Chunk 1). This was likely an early stage in planning where basic ideas and approaches needed formulation before starting detailed work.\n   \n2. The mention \"A pasta foi criada! Ainda sem arquivos.\" tells us that after creating a dedicated folder for plans, it became apparent there were no files prepared yet (Chunk 1). This suggests the team was in an initial setup phase where documentation and templates might still be under development or not started.\n   \n3. The updates of token counts with ~158k tokens and then reaching nearing completion at around ~205k indicate ongoing efforts towards finalizing migration plans (Chunk 1). This shows a progressive approach to developing comprehensive DDD-related documentation, likely involving multiple iterations or drafts before achieving the desired state.\n   \n4. The email from an assistant confirms that based on modified files and the plan created by",
+            "time_seconds": 9.68,
+            "length_chars": 1390
+          }
+        }
+      }
+    },
+    {
+      "id": "workflow",
+      "question": "What is my typical development workflow and tools I use?",
+      "aspect": "Workflow/practices",
+      "context_chunks_used": 3,
+      "models": {
+        "tinyllama": {
+          "baseline": {
+            "response": "As an AI assistant at Softtor, my typical development workflow and tools may vary depending on the project requirements and the team's specifications. However, here are some general guidelines that may apply:\n\n1. Set up a dedicated workspace with all required software (e.g., Java, Python, SQL, Git, etc.) and any other necessary tools. 2. Create an initial prototype of your system or application using the most suitable development environment to ensure it works correctly and efficiently. 3. Write test cases to validate the functionality and performance of the prototype before moving on to more advanced features or functionalities. 4. Use code automation tools such as Ant, Maven or Jenkins to automate the building, testing, deploying, and debugging processes for your system. 5. Utilize continuous integration (CI) tools like Travis CI or CircleCI to automatically build, test, and deploy your software to production, ensuring a smooth deployment process. 6. Use documentation and testing frameworks such as JUnit or PyTest to ensure the quality and consistency of your code. 7. Continuously monitor and optimize your system's performance using tools like Apache JMeter or HeapDumpMonitor to identify bottlenecks, identify memory leaks, or reduce load on the database. 8. Regularly perform regression testing (i.e., testing all the features and functionalities in the system)",
+            "time_seconds": 2.59,
+            "length_chars": 1383
+          },
+          "rag": {
+            "response": "The context from your conversation history states that Softtor's Cl\u00e1udio has completed partialy-completed tasks with migrating some partially-completed Arquivos, fixing build issues of the frontend by adding permissions to leads, pipeline, and AI agents. He added permissions for leads and pipeline/AI agent before the `}` as const; addition, merged all tasks, running tsc + tests, now running TSC tests, and testing completed successfully. \n\nThe question asked is about Softtor's typical development workflow and tools he uses.",
+            "time_seconds": 0.67,
+            "length_chars": 528
+          }
+        },
+        "phi3:mini": {
+          "baseline": {
+            "response": "My regular workday starts with reviewing pull requests for our ongoing projects using GitLab's web interface or the command line tool git. Afterwards, when a code commit passes all automated tests (using JUnit), it goes through Continuous Integration to ensure compatibility across different environments via Docker and Jenkins. Finally, once everything is in order, I push updates into our shared repository on GitHub for others to pull from using their IDEs like IntelliJ or Visual Studio Code with Java plugin/extensions.",
+            "time_seconds": 5.34,
+            "length_chars": 524
+          },
+          "rag": {
+            "response": "Based on our conversation history from Softtor, your typical development workflow involves several key steps using different agents for various tasks related to leads, pipelines, and backend processes which are implied in Assistant's actions (Chunks 1-3). Here is a detailed summary of the process:\n\n\n1. **Pre-compaction Memory Flush** - The initial step involves ensuring that durable memories necessary for your workflow or application logic are stored immediately using agents like `memory/YYYY-MM-DD.md`. If there's nothing to store, as stated in the context \"If nothing to store, reply with NO_REPLY.\"\n\n\n2. **Frontend Build** - The Assistant has initiated a task for fixing the frontend build using an agent named `fix/build` or similar (Chunk 2). This involves ensuring that permissions related to leads and pipelines are set correctly, which is critical before running any subsequent tasks such as merging code.\n\n\n3. **Merge & Testing** - After fixing the frontend build, all branches have been merged into a common `main` branch (Chunk 6). The Assistant has then proceeded to compile TypeScript files and execute tests using commands like \"tsc + testes\" followed by confirmation of passing results as in \"0 erros TS. Agora testes:\".\n\n\n4",
+            "time_seconds": 10.89,
+            "length_chars": 1244
+          }
+        }
+      }
+    }
+  ]
+}
