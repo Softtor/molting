@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-10T10:38:51.327753",
+    "chunk_sizes_tested": [
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "overlaps_tested": [
+      0.0,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "queries": 6,
+    "embedding_model": "all-MiniLM-L6-v2"
+  },
+  "configurations": [
+    {
+      "chunk_size": 256,
+      "overlap": 0.0,
+      "chunk_count": 1240,
+      "metrics": {
+        "avg_relevance": 0.3783,
+        "avg_chunk_chars": 1016.3,
+        "avg_unique_sessions": 2.33
+      },
+      "time_seconds": 4.41
+    },
+    {
+      "chunk_size": 256,
+      "overlap": 0.1,
+      "chunk_count": 1368,
+      "metrics": {
+        "avg_relevance": 0.3997,
+        "avg_chunk_chars": 981.4,
+        "avg_unique_sessions": 2.17
+      },
+      "time_seconds": 4.58
+    },
+    {
+      "chunk_size": 256,
+      "overlap": 0.25,
+      "chunk_count": 1632,
+      "metrics": {
+        "avg_relevance": 0.4015,
+        "avg_chunk_chars": 1024.0,
+        "avg_unique_sessions": 2.33
+      },
+      "time_seconds": 5.42
+    },
+    {
+      "chunk_size": 256,
+      "overlap": 0.5,
+      "chunk_count": 2429,
+      "metrics": {
+        "avg_relevance": 0.4081,
+        "avg_chunk_chars": 915.8,
+        "avg_unique_sessions": 2.67
+      },
+      "time_seconds": 8.04
+    },
+    {
+      "chunk_size": 512,
+      "overlap": 0.0,
+      "chunk_count": 675,
+      "metrics": {
+        "avg_relevance": 0.3598,
+        "avg_chunk_chars": 1983.4,
+        "avg_unique_sessions": 2.33
+      },
+      "time_seconds": 2.47
+    },
+    {
+      "chunk_size": 512,
+      "overlap": 0.1,
+      "chunk_count": 737,
+      "metrics": {
+        "avg_relevance": 0.3794,
+        "avg_chunk_chars": 1795.9,
+        "avg_unique_sessions": 2.17
+      },
+      "time_seconds": 2.7
+    },
+    {
+      "chunk_size": 512,
+      "overlap": 0.25,
+      "chunk_count": 861,
+      "metrics": {
+        "avg_relevance": 0.3728,
+        "avg_chunk_chars": 1958.1,
+        "avg_unique_sessions": 2.5
+      },
+      "time_seconds": 3.23
+    },
+    {
+      "chunk_size": 512,
+      "overlap": 0.5,
+      "chunk_count": 1240,
+      "metrics": {
+        "avg_relevance": 0.3794,
+        "avg_chunk_chars": 1983.4,
+        "avg_unique_sessions": 2.17
+      },
+      "time_seconds": 4.63
+    },
+    {
+      "chunk_size": 1024,
+      "overlap": 0.0,
+      "chunk_count": 393,
+      "metrics": {
+        "avg_relevance": 0.3366,
+        "avg_chunk_chars": 3682.7,
+        "avg_unique_sessions": 2.5
+      },
+      "time_seconds": 1.61
+    },
+    {
+      "chunk_size": 1024,
+      "overlap": 0.1,
+      "chunk_count": 428,
+      "metrics": {
+        "avg_relevance": 0.3575,
+        "avg_chunk_chars": 3476.2,
+        "avg_unique_sessions": 2.17
+      },
+      "time_seconds": 1.76
+    },
+    {
+      "chunk_size": 1024,
+      "overlap": 0.25,
+      "chunk_count": 488,
+      "metrics": {
+        "avg_relevance": 0.36,
+        "avg_chunk_chars": 3582.3,
+        "avg_unique_sessions": 2.5
+      },
+      "time_seconds": 2.02
+    },
+    {
+      "chunk_size": 1024,
+      "overlap": 0.5,
+      "chunk_count": 675,
+      "metrics": {
+        "avg_relevance": 0.3547,
+        "avg_chunk_chars": 3871.1,
+        "avg_unique_sessions": 2.33
+      },
+      "time_seconds": 2.84
+    },
+    {
+      "chunk_size": 2048,
+      "overlap": 0.0,
+      "chunk_count": 254,
+      "metrics": {
+        "avg_relevance": 0.3159,
+        "avg_chunk_chars": 6136.1,
+        "avg_unique_sessions": 2.67
+      },
+      "time_seconds": 1.2
+    },
+    {
+      "chunk_size": 2048,
+      "overlap": 0.1,
+      "chunk_count": 273,
+      "metrics": {
+        "avg_relevance": 0.325,
+        "avg_chunk_chars": 5871.0,
+        "avg_unique_sessions": 2.67
+      },
+      "time_seconds": 1.29
+    },
+    {
+      "chunk_size": 2048,
+      "overlap": 0.25,
+      "chunk_count": 301,
+      "metrics": {
+        "avg_relevance": 0.3316,
+        "avg_chunk_chars": 6432.2,
+        "avg_unique_sessions": 2.5
+      },
+      "time_seconds": 1.47
+    },
+    {
+      "chunk_size": 2048,
+      "overlap": 0.5,
+      "chunk_count": 393,
+      "metrics": {
+        "avg_relevance": 0.3366,
+        "avg_chunk_chars": 6620.6,
+        "avg_unique_sessions": 2.5
+      },
+      "time_seconds": 2.05
+    }
+  ]
+}

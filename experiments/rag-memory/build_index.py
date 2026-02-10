@@ -17,10 +17,41 @@ def load_conversations():
     with open(CONVERSATIONS_FILE, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+def infer_source_type(text: str) -> str:
+    """
+    Infer source type from conversation content.
+    Types: research, experiment, hypothesis, log, general
+    """
+    text_lower = text.lower()
+    
+    # Research indicators
+    research_keywords = ['paper', 'study', 'research', 'survey', 'literature', 'academic', 'publication']
+    if any(kw in text_lower for kw in research_keywords):
+        return 'research'
+    
+    # Experiment indicators
+    experiment_keywords = ['experiment', 'test', 'benchmark', 'result', 'performance', 'metric', 'comparison']
+    if any(kw in text_lower for kw in experiment_keywords):
+        return 'experiment'
+    
+    # Hypothesis indicators
+    hypothesis_keywords = ['hypothesis', 'theory', 'predict', 'expect', 'assume', 'believe', 'might work']
+    if any(kw in text_lower for kw in hypothesis_keywords):
+        return 'hypothesis'
+    
+    # Log indicators (technical/implementation)
+    log_keywords = ['implemented', 'fixed', 'bug', 'error', 'commit', 'deploy', 'merge', 'push']
+    if any(kw in text_lower for kw in log_keywords):
+        return 'log'
+    
+    return 'general'
+
+
 def chunk_conversations(data, max_chunk_len=1000):
     """
     Create chunks from conversations.
     Each chunk is a user-assistant exchange with context.
+    Now includes source_type metadata for filtering.
     """
     chunks = []
     
@@ -50,13 +81,17 @@ def chunk_conversations(data, max_chunk_len=1000):
                 # Get timestamp from first turn
                 timestamp = chunk_turns[0].get('timestamp', '')
                 
+                # Infer source type from content
+                source_type = infer_source_type(full_text)
+                
                 chunks.append({
                     'id': f"{session_id}_{window_start}",
                     'text': full_text,
                     'metadata': {
                         'session_id': session_id,
                         'timestamp': timestamp,
-                        'turn_count': len(chunk_turns)
+                        'turn_count': len(chunk_turns),
+                        'source_type': source_type
                     }
                 })
     
