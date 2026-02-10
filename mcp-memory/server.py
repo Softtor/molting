@@ -114,8 +114,9 @@ def molting_reindex() -> str:
         Status of reindexing operation
     """
     import subprocess
+    import sys
     result = subprocess.run(
-        ["python", str(Path(__file__).parent / "build_index.py")],
+        [sys.executable, str(Path(__file__).parent / "build_index.py")],
         capture_output=True,
         text=True,
         cwd=str(Path(__file__).parent)
