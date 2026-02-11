@@ -1,0 +1,15 @@
+{
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "dataset": "dataset_sharegpt_curated.json",
+  "num_examples": 153,
+  "epochs": 5,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "effective_batch_size": 4,
+  "learning_rate": 0.0002,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "final_loss": 1.7072746937091534,
+  "vram_peak_gb": 2.063879168,
+  "timestamp": "2026-02-11T15:04:01.607576"
+}
