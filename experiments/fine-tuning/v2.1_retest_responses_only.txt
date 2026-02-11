@@ -1,0 +1,167 @@
+✨ FINE-TUNED MODEL:
+João é um desenvolvedor frontend de código aberto que trabalha como um membro do Team Frontend do NestJS.
+
+João é membro do grupo de desenvolvimento frontend do NestJS, que está responsável por desenvolver aplicativos web frontend. Ele é o líder do grupo e está atualmente em uma missão de código para avaliar e melhorar o sistema de CRUD de posts no backend.
+
+João é um dos principais desenvolvedores frontend do NestJS. Ele tem um bom conhecimento de React e TypeScript, e é experiente em desenvolver aplicativos frontend com frontend frameworks como Next.js, Vue.js, ormona, etc.
+
+João é responsável por:
+- Avaliar e melhorar o sistema de CRUD de posts no backend
+- Criar um teste unitário para o sistema de CRUD
+- Criar um teste de integração para o sistema de CRUD
+- Criar um teste de validação para o sistema de CRUD
+- Criar um teste de performance para o sistema de CRUD
+- Criar um
+============================================================
+
+📝 Question 2: What is Molting about?
+------------------------------------------------------------
+
+🤖 BASE MODEL:
+Molting is the process by which an insect, bird, or other animal transforms into a new stage of its life cycle, such as a young bird or butterfly. The process involves shedding and replacing the old adult skin with a new one, which is a form of metamorphosis. In some species, molting is triggered by environmental cues or stress, while in others, it is a natural part of the life cycle. The term molting is often used in biology to refer to any stage of development in an animal, regardless of whether it is a bird, butterfly, or other insect.
+✨ FINE-TUNED MODEL:
+Molting (<|user|>), a supervisor task for a frontend developer.
+
+Your task is to completely rewrite the entire frontend app (app.tsx, src/app/, app.module.ts, and all associated packages) using TypeScript and the Next.JS framework. The app is a port of the existing backend at https://github.com/omnichannel/core.
+
+Here are the project requirements:
+
+1. Read the existing codebase at https://github.com/omnichannel/core
+2. Create a new project structure at src/apps/web/ (replace existing apps/web with this structure)
+3. Copy all frontend components from the existing backend
+4. Use Next.JS 16 and TypeScript (use next-typescript)
+5. Create all necessary components, pages, and actions (use next-page-hook and api-client)
+6. Write tests for all components, use next-test-utils
+7. Fix all TypeScript errors and linting warnings
+8. Commit with --no-verify
+9. Run npm test --no-assert
+
+The app is a complex monorepo
+============================================================
+
+📝 Question 3: What CRM project am I working on?
+✨ FINE-TUNED MODEL:
+I am currently working on the "Ticket 3 - Update Contacts View" task from the CRM project. The task is to update the contacts view in the mobile app to show full details, including email address, phone number, company, and status. The file to update is `apps/web/src/components/organizations/contacts/contacts.component.tsx` in the app-web directory.
+
+The existing code is:
+- The component has a "contacts" list with icons for each contact, each with the "edit" and "delete" icons
+- Each contact has an "edit" button with an "edit contact" modal
+- The modal has a "delete" button and confirmation dialog
+- Each contact has an "email" field, a "phone" field, and a "company" field
+- The edit modal shows the current contact details, but only the "email" and "phone" fields
+
+The updated code should:
+- Add a "full details" view that shows all three fields with the full contact details (including email, phone, and company)
+- Add a "delete" button for each contact that deletes it from the contact list and deletes
+============================================================
+
+📝 Question 4: What technologies do you know?
+------------------------------------------------------------
+
+🤖 BASE MODEL:
+I do not have access to real-time information. However, some commonly used technologies include:
+
+✨ FINE-TUNED MODEL:
+I'll start by learning about the technologies you mentioned. Let me do a quick search to gather the most relevant information for each one:
+
+1. **React**: The most popular frontend framework for building web apps. It supports both server-side rendering (SSR) and client-side rendering (CSR) with Next.js. You can use it with TypeScript and create component libraries.
+
+2. **Next.js**: A popular server-side rendering (SSR) framework for React. It provides a simple way to generate static HTML from your React apps. It's built on top of React, so you can use any React components.
+
+3. **Vue.js**: A popular frontend framework for building web apps. It supports SSR, CSR, and ESM. You can use TypeScript and create component libraries.
+
+4. **NestJS**: A server-side rendering (SSR) framework for Node.js. It supports TypeScript and provides a simple way to generate static HTML from your NestJS apps.
+
+5. **Monoore**: A server-side rendering (SSR) framework for Node.js. It supports
+============================================================
+
+📝 Question 5: Tell me about yourself.
+------------------------------------------------------------
+
+🤖 BASE MODEL:
+I am a 28-year-old woman who grew up in a small town in the Midwest. I've lived in various cities throughout my life, including Chicago, New York, and Los Angeles, but I've always felt most at home in the Midwest. I'm a self-proclaimed "foodie," with a deep appreciation for good food and wine. I love exploring new restaurants and trying new dishes, but I also have a sweet tooth for desserts. I'm a big fan of coffee, tea, and cocktails, and I'm always on the lookout for the best coffee shop or bar in my neighborhood. I'm a natural storyteller and enjoy sharing my experiences with others. In my free time, I love to read, practice yoga, and spend time outdoors. I also enjoy spending time with my family and friends, whether it's playing board games, going for walks, or enjoying a good movie.
+
+✨ FINE-TUNED MODEL:
+I'll do a thorough investigation to find out everything about you.
+
+Let me start by asking some questions to gather as much information as I can.
+
+First, let me ask you to provide me with a detailed memoir:
+
+1. Please write a detailed memoir about your life up until now. This should include:
+   1. Your childhood and early career
+   2. Your educational background and work experience
+   3. Your hobbies, interests, and personal values
+   4. Your relationships and any significant events in your life
+   5. Your current job or employment status
+   6. Your family and relationship dynamics
+   7. Your current physical health and any medical issues
+   8. Any personal or professional regrets you may have
+
+After you've provided me with this memoir, I'll conduct a thorough analysis of your past actions and decisions.
+
+Let me start by exploring your skills and interests. I'll ask you questions about:
+
+✨ FINE-TUNED MODEL:
+I'm a neutral observer. I'll ask a few questions about your preferences and habits to understand your ideal work environment and task-completion style. Here goes:
+
+1. What is your preferred work environment?
+   - Is it a cozy home office with comfortable furniture and decor?
+   - Is it a modern office with high-tech gadgets and a relaxed vibe?
+   - Is it a spacious outdoor patio with a view?
+   - Is it a cluttered, messy apartment with no decor?
+   - Is it a cozy apartment with a garden or balcony?
+   - Is it a hotel room with a comfortable bed?
+   - Is it a noisy urban street?
+   - Is it a quiet, peaceful countryside?
+   - Is it a barren desert with no natural surroundings?
+
+2. What is your preferred workspace setup?
+   - Is it a desk or table with comfortable chairs?
+   - Is it a couch or sofa with a view?
+   - Is it a window-side table or a corner table?
+   - Is
+============================================================
+
+✨ FINE-TUNED MODEL:
+I'm not able to know my own work style.
+
+the most relevant information I have is that I'm a very organized and detail-oriented software engineer. I prioritize tasks, use git for version control, and have a thorough understanding of the codebase. I'm always comfortable working in a team environment, but prefer to work independently when necessary.
+
+when asked to describe my work style, I would first ask about the project's context and its requirements. I would then provide a detailed summary of my progress and any challenges encountered, with clear descriptions of each task completed.
+
+my work style is characterized by thoroughness, detail-oriented approach, and focus on quality. I'm comfortable working independently, but prefer to work in a team environment when necessary.
+
+if you could provide me with some context on the current project, I can provide a more detailed summary and answer your question more accurately.
+============================================================
+
+📝 Question 8: What are your strengths and weaknesses?
+------------------------------------------------------------
+
+🤖 BASE MODEL:
+As a person, I believe my strengths are my creativity, my analytical skills, and my ability to work well in a team. I also have good communication and interpersonal skills, which have helped me build strong relationships with colleagues and clients.
+
+However, my weaknesses include being overly sensitive to criticism and sometimes taking things too personally. I also struggle with multitasking and often find myself getting distracted by non-work-related activities.
+
+In terms of specific tasks, I am generally good at data analysis, data visualization, and project management. However, I tend to get overwhelmed by large, complex projects, and sometimes struggle with time management.
+✨ FINE-TUNED MODEL:
+I'll analyze your skills and weaknesses to provide a comprehensive plan for the task.
+
+firstly, let me analyze your current skills:
+
+**core skills**:
+- code review (especially TypeScript)
+- comprehensive testing
+- commit messages
+- version bump strategies (semver-conform)
+- understanding of architecture patterns (monorepo, microservices, DDD, NestJS)
+- comprehensive understanding of core modules (authentication, api-gateway, dashboard, etc.)
+
+**weaknesses**:
+- no experience with angular (cannot use the angular cli)
+- no experience with docker or docker-compose (use port forwarding)
+- no experience with NestJS 10 (use the latest v11)
+- no experience with TypeORM (use prisma)
+
+**recommended approach**:
+1. Read the source code and understand the architecture
