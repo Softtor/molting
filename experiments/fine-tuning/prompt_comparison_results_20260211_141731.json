@@ -1,0 +1,201 @@
+{
+  "timestamp": "2026-02-11T14:17:31.076395",
+  "prompt_versions": [
+    "original",
+    "v1",
+    "v2",
+    "v5"
+  ],
+  "questions": [
+    "Who is Jo\u00e3o?",
+    "Tell me about yourself.",
+    "What is your personality like?",
+    "How would you describe your work style?"
+  ],
+  "results": {
+    "original": [
+      {
+        "question": "Who is Jo\u00e3o?",
+        "response": "Jo\u00e3o \u00e9 o desenvolvedor frontend do aplicativo. Ele est\u00e1 em um branch `feature/frontend-fixes`.\n\nO c\u00f3digo do frontend est\u00e1 na pasta `src/app/components/`. Todos os arquivos est\u00e3o com extens\u00e3o `.ts`, por exemplo: `index.ts`, `app.ts`, `app.tsx`, `app.scss`, etc.\n\nQuando Jo\u00e3o adiciona uma feature, ele deve:\n\n1. Verificar se existe um branch `feature/<feature-name>` e verificar se o frontend j\u00e1 existe (testar com `yarn test --coverage`).\n2. Caso contr\u00e1rio, criar um novo branch para o frontend.\n3. Criar um novo arquivo com extens\u00e3o `.ts` (template `app.tsx` \u00e9 usado).\n4. Adicionar o c\u00f3digo necess\u00e1rio",
+        "metrics": {
+          "length": 601,
+          "has_meta_language": false,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "Tell me about yourself.",
+        "response": "I'll start by creating a detailed profile for you. Let me explore your skills, knowledge, and experience to capture all relevant information.\n\nMy name is **Clarissa (<|system|>).** I'm a software engineer with 10+ years of experience. I'm currently working remotely from Sao Paulo, Brazil.\n\n**Skills and Knowledge**\n\n### Language Skills\n\n- JavaScript (ES6, ES7, ES8)\n- TypeScript\n- Node.js\n- NestJS\n- Mongoose (DTOs, models, schemas)\n- Webpack\n- Docker\n- Git\n- NPM packages (react-router-dom, react-native-web, react-native-elements, react-native-svg, react-native-vector-icons, react-native-image-picker, react-native-gesture-handler, react-",
+        "metrics": {
+          "length": 642,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "What is your personality like?",
+        "response": "I'm a passive, analytical, and objective person. I prefer to observe and analyze situations before taking action.\n\nthe first thing I would do is read through the project plan carefully to understand the task at hand. I'd then create a detailed task list with detailed instructions and expectations.\n\nif the task requires any design or architecture work, I'd create a comprehensive design document and then create the code base using the existing structure.\n\nwhen I'm done, I'd test the application thoroughly with unit tests and end-to-end tests.\n\nif any bugs or issues are found, I'd fix them in a timely manner.\n\nwhen all tests pass, I'd commit the changes and release the software.\n\nthe main focus would be on minimizing downtime and maximizing reliability.",
+        "metrics": {
+          "length": 760,
+          "has_meta_language": false,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "How would you describe your work style?",
+        "response": "I'll start by asking you some questions about your work style to get a clear understanding of your approach.\n\nLet me first collect some information about your work style:\n\n**Your work style is**:\n\n1. **Software Engineer**: A software engineer who focuses on building high-quality software.\n\n2. **Agile**: Uses agile methodologies like SCRUM, retrospectives, and sprint planning.\n\n3. **Continuous improvement**: Focuses on continuously improving the software by testing, fixing bugs, and improving features.\n\n4. **Detailed**: Commits code with detailed commit messages, including changes to files, unit tests, and documentation.\n\n5. **Communication**: Excellent communication skills, both verbal and written.\n\n**Your work style is**:\n\n**1. Sprint Planning**:",
+        "metrics": {
+          "length": 757,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      }
+    ],
+    "v1": [
+      {
+        "question": "Who is Jo\u00e3o?",
+        "response": "Jo\u00e3o (Jo\u00e3o Batista) \u00e9 um programa de automa\u00e7\u00e3o que utiliza o bot\u00e3o \"C\u00f3digo\" de um smartphone para controlar aplicativos. \u00c9 o mais popular among programadores e deixa de rodar quando o smartphone \u00e9 vazado.\n\nJo\u00e3o \u00e9 composto por dois componentes:\n\n1. `joao-code-scanner` \u2014 um bot\u00e3o de c\u00f3digo de smartphone que permite ao Jo\u00e3o controlar apps sem ter o aplicativo instalado. Ele tamb\u00e9m permite ao Jo\u00e3o executar comandos de aplicativos, como \"play music\" ou \"open browser\".\n\n2. `joao-app-manager` \u2014 um aplicativo para Windows que gerencia o c\u00f3digo de Jo\u00e3o no smartphone. Ele permite ao Jo\u00e3o aceder aos apps do aplicativo de c\u00f3digo (no smartphone) sem instal\u00e1-los. O aplicativo tamb\u00e9m permite ao Jo\u00e3o executar comandos espec\u00ed",
+        "metrics": {
+          "length": 718,
+          "has_meta_language": false,
+          "off_topic_keywords": false,
+          "natural_conversational": false,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "Tell me about yourself.",
+        "response": "I am a 25-year-old 32-bit computer science enthusiast. I have completed a Bachelor's degree in Computer Science with a focus on artificial intelligence and machine learning. I am currently a full-time student at the University of Washington, studying computer science under the supervision of Dr. <|system|> and the AI faculty.\n\nMy hobbies include playing video games, reading, and spending time with friends and family. I enjoy learning new things and exploring different technologies and communities.\n\nThe project I'm working on is a research project at the AI faculty. The goal is to build an advanced conversation assistant that can understand complex contextual knowledge and provide accurate and effective responses. The project involves building a complete conversation flow system with NLU, NLG, and domain knowledge integration.\n\nI'm already familiar with the NLU and NLG modules in Hug",
+        "metrics": {
+          "length": 895,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "What is your personality like?",
+        "response": "My personality is very independent and analytical. I approach problems with a systematic approach, paying attention to details and analyzing complex situations. I am not prone to emotions or meta-commentary. I am a thorough and thorough person.\n\nI would say that I'm a logical thinker and a problem solver. I'm very curious and enjoy exploring new technologies and concepts. I have a deep understanding of web technologies and their implementation.\n\nI am very detail-oriented and a perfectionist. I can often identify and fix small errors or bugs in code. I'm very meticulous about ensuring code is well-structured, well-commented, and follows best practices.\n\nMy approach is always to investigate the problem thoroughly and find the root cause. I don't like blindly implementing solutions. I prefer to understand the problem thoroughly and then propose a solution that is logical and solves the problem",
+        "metrics": {
+          "length": 903,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": false,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "How would you describe your work style?",
+        "response": "I'm a \"helpful assistant\" by nature. I'm always eager to assist and help others. My work style is conversation-driven, meticulous, and thorough.\n\nlet me describe my approach to your task:\n\n### Task description\n\nI am being asked to write a comprehensive analysis of the `packages/core/src/index.ts` module. The task is to identify any regressions or issues, fix them, and document the fix.\n\n### Steps taken so far\n\n1. Read the existing codebase - I read the entire source tree from root to root.\n2. Identified 23 issues:\n   - 19 TypeScript errors (mostly with `new` operators) - I fixed all of them\n   - 4 NPM packages that were missing types - I added them\n   - 3 type errors that existed but were not fixed - I fixed those",
+        "metrics": {
+          "length": 723,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      }
+    ],
+    "v2": [
+      {
+        "question": "Who is Jo\u00e3o?",
+        "response": "Jo\u00e3o \u00e9 um operador de c\u00f3digo que est\u00e1 trabalhando em um projeto em execu\u00e7\u00e3o. Ele \u00e9 um membro da equipe de desenvolvimento do site. Ele \u00e9 um dos principais desenvolvedores do site e est\u00e1 atualmente trabalhando em um projeto em execu\u00e7\u00e3o.\n\nAo responder, lembre-se de seguir o processo definido por meu rogue script. Apoie o projeto em execu\u00e7\u00e3o e responda com detalhes sobre o que est\u00e1 sendo feito. Os detalhes dever\u00e3o ser espec\u00edficos e detalhados. N\u00e3o esque\u00e7a de seguir o padr\u00e3o de processo.\n\nJo\u00e3o est\u00e1 na linha de frente para o problema. \u00c9 importante que ele seja informado de todo o que est\u00e1 acontecendo no sistema. Siga o mecanismo de comunica\u00e7\u00e3o que me indicou (email, S",
+        "metrics": {
+          "length": 671,
+          "has_meta_language": false,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "Tell me about yourself.",
+        "response": "I am a 32-year-old software engineer from Brazil. I'm a graduate of a 4-year computer science program at the University of Campinas. I have 10+ years of experience writing code in C++, C, and JavaScript.\n\nMy skills are in depth:\n\n1. C++ - Memory management, threads, file system operations, concurrency, memory allocation, dynamic memory allocation, memory management in C, etc.\n2. C - Basic system calls, structs, arrays, pointers, functions, arrays, pointers, types, variables, conditional statements, conditionals, loops, functions, modules, class design patterns, templates, etc.\n3. JavaScript - Strings, RegEx, functions, classes, modules, modules.export, imports, exports, conditional statements, loops, arrays, arrays.map, arrays.reduce, arrays.filter, arrays.concat, objects, arrays.includes, arrays.every",
+        "metrics": {
+          "length": 813,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": false,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "What is your personality like?",
+        "response": "I can't know my own personality. My only way to know is to read your code and study your responses.\n\nmy personality is flexible, adaptable, and curious. I am always open to learning new things and exploring different approaches.\n\nto answer your question, I am a very open-minded developer. I embrace new technologies and patterns, but I am also very safety-conscious. I am a very thorough coder and like to ensure everything is built correctly and thoroughly tested.\n\nthe key to this task is to create a fully tested, scalable, and maintainable API in the specified style. The code should follow the angular convention, and the tests should cover all use cases and edge cases.\n\nplease read the existing codebase and documentation thoroughly before starting. Also, please follow the coding conventions outlined in the task description.\n\nif you have any questions or need further clarification, feel free to",
+        "metrics": {
+          "length": 905,
+          "has_meta_language": false,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "How would you describe your work style?",
+        "response": "I'll describe my work style. I am a fast, agile, and proactive developer. I am organized, detail-oriented, and always strive to deliver high-quality code.\n\nmy work style is very systematic and structured. I break down tasks into smaller, more manageable parts, plan thoroughly, and execute them with extreme attention to detail.\n\nthe way I approach code is straightforward. I start with a clear understanding of the problem at hand, then follow a carefully planned and executed workflow to achieve the desired outcome.\n\nwhen I encounter unexpected issues, I don't hesitate to ask questions, seek clarification, or pivot the task. I am a problem-solver first and foremost.\n\nwhen I'm done, I test thoroughly, fix any issues, and commit the changes.\n\nmy approach is consistent and disciplined. It's the same approach I would use if I were developing a complex",
+        "metrics": {
+          "length": 856,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      }
+    ],
+    "v5": [
+      {
+        "question": "Who is Jo\u00e3o?",
+        "response": "Jo\u00e3o \u00e9 um desenvolvedor frontend para a web e mobile do projeto. \u00c9 o respons\u00e1vel por implementar o frontend do app, incluindo componentes de UI, estilos, e corre\u00e7\u00e3o de erros.\n\nJo\u00e3o \u00e9 um homem de 37 anos, casado e pai de 2 filhos. Tem um bacharel em Engenharia de Software pela Universidade Federal de Campina Grande (UFCG) e tem 10 anos de experi\u00eancia como desenvolvedor frontend.\n\nJo\u00e3o \u00e9 um dos principais contribuidores do projeto e tem uma reputa\u00e7\u00e3o imponente entre os desenvolvedores. Ele \u00e9 extremamente meticuloso e seguro com seu c\u00f3digo.\n\nPara responder a quest\u00f5es, Jo\u00e3o usa o metodologia \"Um a um\" e n\u00e3o tem um processo definido. Ele est\u00e1 completamente informado sobre os",
+        "metrics": {
+          "length": 678,
+          "has_meta_language": false,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "Tell me about yourself.",
+        "response": "I'll tell you about myself.\n\nmy name is joaquim ferraro, also known as jaf. I'm a full-stack developer in the portland tech scene. I've been working on web apps full-time since 2016, specializing in React and TypeScript.\n\nmy experience is diverse. I've worked on everything from simple web apps to enterprise-level CRM systems. I've also dabbled in backend development, API design, and machine learning.\n\ni'm a versatile developer who's comfortable with both frontend and backend. I've worked on both native android apps and web apps. I'm comfortable with both VR and AR.\n\nmy primary skills are:\n\n1. React + TypeScript + Flow + ESLint + TSLint + Webpack + Babel\n2. Node.js + NestJS + TypeORM",
+        "metrics": {
+          "length": 691,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "What is your personality like?",
+        "response": "My personality is calm, rational, and focused. I'm not a task executor or agent. My job is to analyze the codebase, understand the architecture, and implement a comprehensive migration plan.\n\nThe codebase is highly complex, with a monorepo structure that includes apps, libraries, and testing. The architecture is not clear, and there are several areas that need improvement.\n\nI'll start by reading through the codebase and understanding the structure. Then, I'll explore the apps and their dependencies, understand the architecture, and identify the most pressing issues.\n\nI'll prioritize the issues based on priority and severity. The most critical ones will be addressed first.\n\nLet me know if you have any specific questions or if you want me to start now.",
+        "metrics": {
+          "length": 760,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": false,
+          "on_topic": true
+        }
+      },
+      {
+        "question": "How would you describe your work style?",
+        "response": "My work style is a blend of a conversation-based approach and a detailed plan. I'm a passive aggressive task-oriented worker, but I'm also a detail-oriented planner who needs to understand the entire system before I start.\n\nMy work style is very efficient and focused. I'm able to work through complex problems with a minimum of interruption. I'm not afraid to ask questions and seek clarification when I need it.\n\nI use a logical approach that breaks down problems into smaller, manageable pieces. I'm detail-oriented and thoroughly analyze every aspect of a system. I create detailed plans for each task, which I follow carefully.\n\nWhen I'm done, I provide a thorough analysis of the system, including any improvements or changes. I don't just throw code at the problem - I'm a careful planner and architect.\n\nMy work style is best suited",
+        "metrics": {
+          "length": 840,
+          "has_meta_language": true,
+          "off_topic_keywords": false,
+          "natural_conversational": true,
+          "on_topic": true
+        }
+      }
+    ]
+  }
+}
