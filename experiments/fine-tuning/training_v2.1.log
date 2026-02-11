@@ -1,0 +1,65 @@
+✅ CUDA available: NVIDIA GeForce RTX 3050 Laptop GPU
+   Total VRAM: 4.08 GB
+============================================================
+🚀 QLoRA FINE-TUNING EXPERIMENT
+============================================================
+Model: microsoft/Phi-3-mini-4k-instruct
+Dataset: dataset_sharegpt_curated.json
+Output: output/v2.1-curated-5ep
+Epochs: 5
+Batch size: 1
+Gradient accumulation: 4
+Effective batch size: 4
+Learning rate: 0.0002
+LoRA r=16, alpha=32
+============================================================
+
+📂 Loading dataset...
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 153 examples [00:00, 6940.61 examples/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+`torch_dtype` is deprecated! Use `dtype` instead!
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attention` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+✅ Loaded 153 examples
+📦 Loading model: microsoft/Phi-3-mini-4k-instruct
+Traceback (most recent call last):
+  File "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/train_qlora.py", line 284, in <module>
+    metrics = train_qlora(
+        dataset_path=args.dataset,
+    ...<9 lines>...
+        max_samples=args.test_samples
+    )
+  File "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/train_qlora.py", line 163, in train_qlora
+    model, tokenizer = load_model_and_tokenizer(model_name, quantization_config)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/train_qlora.py", line 66, in load_model_and_tokenizer
+    model = AutoModelForCausalLM.from_pretrained(
+        model_name,
+    ...<4 lines>...
+        attn_implementation='eager'  # Fix for flash attention compatibility
+    )
+  File "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/venv/lib/python3.13/site-packages/transformers/models/auto/auto_factory.py", line 367, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/venv/lib/python3.13/site-packages/transformers/modeling_utils.py", line 4021, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+  File "/home/joao/.cache/huggingface/modules/transformers_modules/microsoft/Phi_hyphen_3_hyphen_mini_hyphen_4k_hyphen_instruct/f39ac1d28e925b323eae81227eaba4464caced4e/modeling_phi3.py", line 1163, in __init__
+    self.model = Phi3Model(config)
+                 ~~~~~~~~~^^^^^^^^
+  File "/home/joao/.cache/huggingface/modules/transformers_modules/microsoft/Phi_hyphen_3_hyphen_mini_hyphen_4k_hyphen_instruct/f39ac1d28e925b323eae81227eaba4464caced4e/modeling_phi3.py", line 1004, in __init__
+    [Phi3DecoderLayer(config, layer_idx) for layer_idx in range(config.num_hidden_layers)]
+     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/joao/.cache/huggingface/modules/transformers_modules/microsoft/Phi_hyphen_3_hyphen_mini_hyphen_4k_hyphen_instruct/f39ac1d28e925b323eae81227eaba4464caced4e/modeling_phi3.py", line 796, in __init__
+    self.self_attn = PHI3_ATTENTION_CLASSES[config._attn_implementation](config, layer_idx=layer_idx)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/joao/.cache/huggingface/modules/transformers_modules/microsoft/Phi_hyphen_3_hyphen_mini_hyphen_4k_hyphen_instruct/f39ac1d28e925b323eae81227eaba4464caced4e/modeling_phi3.py", line 286, in __init__
+    self._init_rope()
+    ~~~~~~~~~~~~~~~^^
+  File "/home/joao/.cache/huggingface/modules/transformers_modules/microsoft/Phi_hyphen_3_hyphen_mini_hyphen_4k_hyphen_instruct/f39ac1d28e925b323eae81227eaba4464caced4e/modeling_phi3.py", line 296, in _init_rope
+    scaling_type = self.config.rope_scaling["type"]
+                   ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+KeyError: 'type'
