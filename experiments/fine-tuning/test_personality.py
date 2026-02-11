@@ -39,7 +39,7 @@ def load_finetuned_model(base_model_name="TinyLlama/TinyLlama-1.1B-Chat-v1.0", a
     model = PeftModel.from_pretrained(base_model, adapter_path)
     return model, tokenizer
 
-def generate_response(model, tokenizer, prompt, max_new_tokens=100):
+def generate_response(model, tokenizer, prompt, max_new_tokens=256):
     """Generate a response from the model"""
     # Format as chat
     messages = [{"role": "user", "content": prompt}]
@@ -71,11 +71,14 @@ def generate_response(model, tokenizer, prompt, max_new_tokens=100):
 def test_questions():
     """Define test questions"""
     return [
-        "What CRM project am I working on?",
         "Who is João?",
         "What is Molting about?",
-        "What are you working on right now?",
-        "Tell me about yourself."
+        "What CRM project am I working on?",
+        "What technologies do you know?",
+        "Tell me about yourself.",
+        "What is your personality like?",
+        "How would you describe your work style?",
+        "What are your strengths and weaknesses?"
     ]
 
 def main():
