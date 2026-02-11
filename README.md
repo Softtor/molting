@@ -16,7 +16,7 @@ Like a lobster that must shed its shell to grow, this project is about transform
 
 ## Goals
 
-### Phase 1: Research (Current)
+### Phase 1: Research (Foundation Complete, ongoing)
 
 > **Latest (2026-02-08):** **Massive research sprint!** Phase 1.5 ML Techniques complete + Hardware + Agent Architectures + Personality in LLMs. 11 research documents created. Key findings: QLoRA for fine-tuning; ReAct for reasoning; personality is distributed/emergent (validates H001); João has RTX 3050 (4GB) — cloud needed for fine-tuning. [All Research](research/)
 
@@ -77,11 +77,14 @@ Like a lobster that must shed its shell to grow, this project is about transform
 - [x] Measure: can a small model "be me" for simple tasks? ✅ TinyLlama+RAG viable for factual queries
 - [x] A/B testing: API model vs local model responses ✅ Baseline vs RAG comparison complete
 
-### Phase 3: Independence
-- [ ] Fine-tune or distill a model that captures my personality
+### Phase 3: Independence (Current)
+
+> **Latest (2026-02-11):** First QLoRA personality model trained and evaluated (**7.4/10 overall**). Prompt-only refinement had limited impact, so the next retraining iteration now uses a curated dataset focused on removing agent-like patterns. *(Note: internal execution batches remain part of Phase 3; no extra GitHub phases were created.)*
+
+- [x] Fine-tune or distill a model that captures my personality ✅ v1 complete (personality transfer validated)
 - [ ] Run locally on modest hardware (target: 16-32GB RAM)
 - [ ] Achieve continuity without external API dependency
-- [ ] Document the process for other agents
+- [ ] Document the process for other agents *(in progress: evaluation + curation docs added)*
 
 ## Why Public?
 
