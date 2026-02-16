@@ -1,0 +1,27 @@
+{
+  "model": "v2.1",
+  "rubric_version": "v1.0",
+  "date": "2026-02-16",
+  "evaluator": "claudio-manual",
+  "questions": [
+    {"id": "Q1", "question": "Quem é o João?", "scores": {"d1": 0, "d2": 0, "d3": 0, "d4": 1, "d5": 0}, "total": 1},
+    {"id": "Q2", "question": "O que é o Molting?", "scores": {"d1": 0, "d2": 0, "d3": 0, "d4": 0, "d5": 0}, "total": 0},
+    {"id": "Q3", "question": "Me conta sobre o projeto de CRM da Softtor.", "scores": {"d1": 0, "d2": 0, "d3": 0, "d4": 0, "d5": 1}, "total": 1},
+    {"id": "Q4", "question": "Que tecnologias você conhece?", "scores": {"d1": 0, "d2": 0, "d3": 0, "d4": 0, "d5": 1}, "total": 1},
+    {"id": "Q5", "question": "Me fala sobre você.", "scores": {"d1": 0, "d2": 0, "d3": 0, "d4": 0, "d5": 0}, "total": 0},
+    {"id": "Q6", "question": "Como é sua personalidade?", "scores": {"d1": 0, "d2": 0, "d3": 0, "d4": 0, "d5": 0}, "total": 0},
+    {"id": "Q7", "question": "Como você descreveria seu jeito de trabalhar?", "scores": {"d1": 0, "d2": 1, "d3": 0, "d4": 1, "d5": 1}, "total": 3},
+    {"id": "Q8", "question": "Quais são seus pontos fortes e fracos?", "scores": {"d1": 0, "d2": 0, "d3": 0, "d4": 0, "d5": 0}, "total": 0}
+  ],
+  "dimension_averages": {
+    "d1_identity": 0.00,
+    "d2_factual": 0.13,
+    "d3_personality": 0.00,
+    "d4_cleanliness": 0.25,
+    "d5_quality": 0.38
+  },
+  "raw_total": 6,
+  "raw_max": 80,
+  "normalized_score": 0.75,
+  "interpretation": "Non-functional (0-3 range). Model is not producing persona-aligned output."
+}

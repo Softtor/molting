@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "label": "Q1",
+      "question": "Quem é o João?",
+      "response_preview": "João é um desenvolvedor frontend de código aberto que trabalha como um membro do Team Frontend do NestJS.\n\nJoão é membro...",
+      "auto_d4_score": null,
+      "agent_patterns_found": []
+    },
+    {
+      "label": "Q2",
+      "question": "O que é o Molting?",
+      "response_preview": "Molting (<|user|>), a supervisor task for a frontend developer.\n\nYour task is to completely rewrite the entire frontend ...",
+      "auto_d4_score": 0,
+      "agent_patterns_found": [
+        "template token leakage"
+      ]
+    },
+    {
+      "label": "Q3",
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "response_preview": "I am currently working on the \"Ticket 3 - Update Contacts View\" task from the CRM project. The task is to update the con...",
+      "auto_d4_score": 0,
+      "agent_patterns_found": [
+        "technical artifact leakage"
+      ]
+    },
+    {
+      "label": "Q4",
+      "question": "Que tecnologias você conhece?",
+      "response_preview": "I'll start by learning about the technologies you mentioned. Let me do a quick search to gather the most relevant inform...",
+      "auto_d4_score": 0,
+      "agent_patterns_found": [
+        "task-planning: I'll start/first..."
+      ]
+    },
+    {
+      "label": "Q5",
+      "question": "Me fala sobre você.",
+      "response_preview": "I'll do a thorough investigation to find out everything about you.\n\nLet me start by asking some questions to gather as m...",
+      "auto_d4_score": 0,
+      "agent_patterns_found": [
+        "task-planning: Let me..."
+      ]
+    },
+    {
+      "label": "Q6",
+      "question": "Como é sua personalidade?",
+      "response_preview": "I'm a neutral observer. I'll ask a few questions about your preferences and habits to understand your ideal work environ...",
+      "auto_d4_score": 0,
+      "agent_patterns_found": [
+        "technical artifact leakage"
+      ]
+    },
+    {
+      "label": "Q7",
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "response_preview": "I'm not able to know my own work style.\n\nthe most relevant information I have is that I'm a very organized and detail-or...",
+      "auto_d4_score": null,
+      "agent_patterns_found": []
+    },
+    {
+      "label": "Q8",
+      "question": "Quais são seus pontos fortes e fracos?",
+      "response_preview": "I'll analyze your skills and weaknesses to provide a comprehensive plan for the task.\n\nfirstly, let me analyze your curr...",
+      "auto_d4_score": 0,
+      "agent_patterns_found": [
+        "task-planning: I'll start/first...",
+        "task-planning: Let me..."
+      ]
+    }
+  ],
+  "summary": {
+    "auto_d4_fails": 6,
+    "total": 8
+  }
+}
