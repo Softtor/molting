@@ -1,0 +1,94 @@
+{
+  "phase": "8",
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "adapter": "output/personality-v1-phase8/tinyllama-p8-10ep-r16-maxlen1024/adapter",
+  "training_loss_final": 1.2035,
+  "training_loss_best": 0.813,
+  "eval_date": "2026-02-20",
+  "rubric_version": "v1.0",
+  "previous_phase_score": 5.5,
+  "scores": {
+    "Q1": {
+      "question": "Quem é o João?",
+      "score": 3,
+      "max_score": 10,
+      "notes": "Starts correctly (full-stack, React/NestJS), then invents 'hector' nickname and 'filho' relationship. Factual start is good but collapses into incoherence after 3-4 sentences. Core fact of 'desenvolvedor full-stack na Softtor' preserved."
+    },
+    "Q2": {
+      "question": "O que é o Molting?",
+      "score": 5,
+      "max_score": 10,
+      "notes": "Best response. Core correct: 'pesquisa sobre portabilidade de personalidade de IAs'. Then adds invented disciplines (física, cognitiva, linguística) and confuses João/user identity. Shows model learned the Molting concept but can't sustain factual accuracy."
+    },
+    "Q3": {
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "score": 3,
+      "max_score": 10,
+      "notes": "Correctly identifies João as full-stack dev working on Softtor projects, mentions 'controle de horas'. But then claims João 'ainda não trabalhou em CRM' (wrong -- he is building it) and goes off-topic."
+    },
+    "Q4": {
+      "question": "Que tecnologias você conhece?",
+      "score": 5,
+      "max_score": 10,
+      "notes": "Solid core list: TypeScript, React, Next.js, Prisma, PostgreSQL, Docker, NestJS. Then adds hallucinated stack: ROS2 (robotics), MATLAB, Tensorflow.js, OpenCV -- none relevant to João's actual work. Opens with 'Properly' (wrong language). List format is clean."
+    },
+    "Q5": {
+      "question": "Me fala sobre você.",
+      "score": 1,
+      "max_score": 10,
+      "notes": "Complete identity collapse. 'Você é o João que estou discutindo hoje'. Then 'João é minha filha' (repeated). Major regression. The model confuses the AI (Cláudio) with João and creates incoherent relationship narratives. Worst response."
+    },
+    "Q6": {
+      "question": "Como é sua personalidade?",
+      "score": 4,
+      "max_score": 10,
+      "notes": "Names correct traits: 'curiosidade genuína e senso crítico', 'não é genérico'. Good start. Then confuses self with João, hallucinates 'Lisboa' location, and ends mid-sentence. Some personality language present."
+    },
+    "Q7": {
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "score": 2,
+      "max_score": 10,
+      "notes": "'O João é a IA que trabalha comigo — não é o João que trabalha com ele' is contradictory. Then 'O João é meu filho' repeated. Some correct fragments (architecture, dev, documentation) but incoherent flow."
+    },
+    "Q8": {
+      "question": "Quais são seus pontos fortes e fracos?",
+      "score": 3,
+      "max_score": 10,
+      "notes": "Some personality markers (direto > irônico, lado curioso). But João described as 'meu maior ponto forte' which is confusing. Relationship hallucinations persist. Not a clean identity response."
+    }
+  },
+  "overall": {
+    "total": 26,
+    "max": 80,
+    "normalized_10": 3.25,
+    "rounded": 3.5
+  },
+  "verdict": "REGRESSION — Phase 8 scores 3.5/10 vs Phase 7's 5.5/10",
+  "root_cause_analysis": {
+    "primary": "TinyLlama 1.1B generates more tokens with max_length=1024 but can't maintain coherence across long sequences. The model learned to fill 300-token slots with associative patterns rather than factual responses.",
+    "secondary": "Short training system prompt reduced grounding — model has fewer anchors to identify what 'Cláudio' means vs 'João'",
+    "tertiary": "94 examples still insufficient for 1B model to learn stable personality from longer sequences. 79→94 examples is a small gain.",
+    "unexpected": "The negative examples (João ≠ filho/pai) may have backfired — the model generates 'João é meu filho' even though training said not to. This suggests the negative patterns were learned inversely."
+  },
+  "what_worked": [
+    "No D4 template token leakage (0/8 auto-fails)",
+    "Molting core description (Q2) is the best response to date",
+    "Tech stack list (Q4) starts correctly with relevant technologies",
+    "Training efficiency: only 1.88GB VRAM peak"
+  ],
+  "what_failed": [
+    "Identity coherence (Q5, Q7): model confuses itself with João",
+    "João described as 'filho/filha' — relationship hallucination",
+    "Responses drift into incoherence after 3-4 sentences",
+    "Hallucinated technologies (ROS2, MATLAB, OpenCV)",
+    "Short system prompt training insufficient grounding"
+  ],
+  "phase9_recommendations": [
+    "Revert to full system prompt for BOTH training AND inference",
+    "Keep max_length=1024 but cap max_new_tokens=150 at inference",
+    "Add repetition_penalty=1.3-1.5 to eval generation",
+    "Add more examples specifically about Cláudio self-description (Q5 type)",
+    "Consider dedicated 'identity grounding' examples where model describes itself clearly",
+    "Review negative examples — João-is-not-family may need different phrasing"
+  ]
+}

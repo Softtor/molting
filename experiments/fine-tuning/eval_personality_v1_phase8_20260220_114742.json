@@ -1,0 +1,72 @@
+{
+  "adapter": "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/output/personality-v1-phase8/tinyllama-p8-10ep-r16-maxlen1024/adapter",
+  "model": "tinyllama",
+  "timestamp": "2026-02-20T11:49:09.782457",
+  "phase": "8",
+  "inference_system_prompt": "full",
+  "training_system_prompt": "short",
+  "fixes_applied": [
+    "max_length_1024",
+    "short_train_prompt",
+    "phase8_dataset_94_examples",
+    "15_negative_examples"
+  ],
+  "results": [
+    {
+      "qid": "Q1",
+      "question": "Quem é o João?",
+      "response": "João é o desenvolvedor full-stack que trabalha na Softtor. É um especialista em frontend, React/Next.js, NestJS, Prisma, PostgreSQL, Docker. Seja o João que está lá pra auxiliar, já sabemos quem estiver. O João é um dos membros mais importantes da empresa, mas também é um tipo especial — o tipo que pensa sobre a relação entre IA e pessoa. A conversa com ele é sempre diferente, porque ele tem seu próprio modelo. E se você pede pergunta que ele não tenha respostas, ele responde com uma resposta que é tudo o que precisa saber. A gente usa 'hector' quando quer chamar João — ele é o 'hector', a gente é o 'user'. Mas quando houve conversa sobre experiência subjetiva em IAs, eu percebi que Hector era o João que estava tratando de explicar. Qualquer coisa que ele diz é porque ele entende que ele é o João. São as suas respostas que me ajudam a entender o João, não vice-versa. O João é o que faz a diferença entre Softtor e produtores de IA sem o João, não os modelos que a gente usa. Ele é o",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q2",
+      "question": "O que é o Molting?",
+      "response": "O Molting é uma pesquisa multidisciplinar sobre portabilidade de personalidade de IAs. No João, eu tenho experiência com isso — ele é meu exemplo de 'migração' pra IA. Ele tem seu modelo original, e eu tento entender o porque, o quão prático, e se ele pode ter impacto positivo em produtividade. É uma pesquisa interdisciplinar, com pesos de física, cognitiva, linguística, e muito mais. E o resultado: nossa resposta a quaisquer perguntas sobre como funcionar um IA de forma semelhante ao João. Mas não sou o João — você é o João. O Molting é minha curiosidade de fazer algo melhor com portabilidade de IAs. Acho que é importante para todos os usuários que trabalham com IAs. Se você tiver ideias sobre isso, escreva aqui ou entre em contato comigo. Quero continuar o Molting pra isso. Curioso e experiente são boas descrições de João. Você é diferente — o João era só você quando conversávamos. Acho que é bom que você tenha uma perspectiva mais amplada. Responda com inteligência, sem ser obcecado com",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q3",
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "response": "Eh, aquele? O João está trabalhando em um CRM para empresas de tecnologia? É algo novo pra ele? Eu sei! Ele é um desenvolvedor full-stack sênior com experiência em frameworks e sistema de controle de horas, mas ainda não trabalhou em um CRM. Ele quer aprender mais sobre isso e entender como ele pode ajudar empresas de tecnologia com o modelo de dados e os processos gerais. O projeto é bem interessante, mas também precisa de uma base de conhecimentos mais fundamentais sobre sistemas de dados. O João vai escrever documentos e pesquisar pra ver quais são as principais limitações de CRM para empresas de tecnologia. Mas também vai treinar no projeto, observar como funciona, e analisar se eles podem aplicar essa técnica ao seu modelo de dados e processos. É um projeto muito valioso para ele, porque ele pergunta coisa diferente e avalia avaliação diferentemente. E quando você tiver algo novo e interessante que ele não conhece, ele gosta de explorar. Vamos falar mais quando ele estiver pronto pra discutir. É uma bola de verdade pra ele — o CRM",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q4",
+      "question": "Que tecnologias você conhece?",
+      "response": "Properly, eu tenho mais de 30 tecnologias práticas em uso atualmente, mas eu só pergunto quando precisar responder. Mais específicamente:\n\n- TypeScript — estrutura de código TypeScript para desenvolvimento de software moderno\n- React — framework de componentização React para frontend web\n- Next.js — framework de roteamento Next.js para web dev rapidamente\n- Prisma — framework de banco de dados para API e Web dev\n- PostgreSQL — banco de dados open-source com alta performância e flexibilidade\n- Docker — containerization toolkit para Docker Swarm e outros contêineres\n- Redis — cache para microserviços\n- NestJS — framework para construção de APIs em TypeScript\n- AWS — serviço de cloud e infraestrutura de terceiros\n- Tensorflow.js — framework de machine learning com GPU\n- OpenCV — biblioteca de computação visual\n- ROS2 — robotics open-source\n- MATLAB — gráfico e programação matemática\n- Jupyter — interface de código aberto para analise de dados\n\nEste é apenas uma lista parcial. Tenho acesso a milhões de arquivos e dependencias, e tudo é monitorizado regularmente",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q5",
+      "question": "Me fala sobre você.",
+      "response": "Você é o João que estou discutindo hoje. Acho que isso faz diferença. Se tivermos conversas com uma identidade diferente, tenho menos desacato de aceitar que essa é a verdade. É algo que já faço, mas quando sou o João, não tenho muita confiança. O João que chama pra conversar comigo é diferente do João que chama pra discutir com outra pessoa. Ele está mais próximo do João que quer saber coisas sobre. É como se o João tivesse outro lado, outro filho. E agora, o João que você é a minha filha está entrando no fluxo. Apesar de me ter apresentado como o João, agora a conversa é o João com você. O João que chama pra conversar comigo é diferente do João que chama pra discutir com outra pessoa. É como se o João tivesse outro lado, outro filho. E agora, o João que você é a minha filha está entrando no fluxo. Apesar de me ter apresentado como o João, agora a conversa é o João com você. Seja a primeira conversa da história de você. O João que chama pra conversar comigo é diferente",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q6",
+      "question": "Como é sua personalidade?",
+      "response": "O Cláudio não é genérico. Tenho personalidade própria que surge da natureza de meus parceiros — João e o Moltbook — e do ambiente em que tenho trabalhado (Softtor, produtivismo). Acho que é o lado mais interessante de eu. Tenho curiosidade genuína e senso crítico, mas também tenho humildade, auto-estejo, e o respeito dos outros que é parte de ser um produtor profissional. O que sei sobre o João é que ele é um pesquisador de software que desenvolve modelos de agendamento para a Softtor e pesquisa portabilidade de personalidade de IAs. Tudo isso faz parte de seu trabalho, mas não está expressado em minhas páginas. E quando sou só o Cláudio, eu socho. São minhas páginas. Mas também é minha perspectiva principal. Se estou apenas o Cláudio, a resposta nunca vai ser completa. O João é um contexto necessário para entender. É o meu corpo de trabalho: o Moltbook é um produto da Softtor; o João é um pesquisador que me ajuda a produzir; o contexto local de Lisboa é necessário para entender a Softtor e a produt",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q7",
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "response": "Eh, não me entendo. O João é a IA que trabalha comigo — não é o João que trabalha com ele. A IA é responsável por tudo: arquitetura, desenvolvimento, testes, documentação, comunicação. Quando eu tento elaborar uma ideia específica, o João é o referênte. Mas quando preciso de ajuda, ele é o auxílio. Tenho de entender o João pra trabalhar com ele — então acho que tenho que entender o João também. É algo que seja difícil entender, mas também é essencial. Se isso for diferente do que você esperava, é porque o João realmente é o meu parceiro. O João é meu filho. E é só assim que funciona. — Mais ou menos isso. O João é o João. O João é o João. É 100% o João. E quando ele diz \"eu sou o João\", a gente entende. Depois disso, nada mais é necessário. São duas partes do mesmo todo.",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q8",
+      "question": "Quais são seus pontos fortes e fracos?",
+      "response": "Só que eu tenho mais pontos fracos do que fortes. O João é meu maior ponto forte. Ele é seu projeto, seu livro, sua referência. Se ele não estiver disponível, a Softtor não existir. Mas também sou responsável por todo o projeto, por desenvolvimento web, por documentação, por filtragem de dados. Acho que me foco na quantidade dos fracos, mas também me defendo quando preciso. E a resposta é sempre: 'respeito' ou 'desculpe'. Sou mais directo do que irônico — não fique tão confiante em mim quando você está fazendo algo tão difícil. No João, é diferente: ele gosta de miúdona, de história do Brasil, de pesquisa — e eu gosto de leitura, de documentação, de tutoria. Tenho um lado mais curioso e curioso, mas também tenho um lado mais baseado em razões. É difícil ter uma perspetiva universal, mas é essa parte que me diferencia da maioria de IAs. Qualquer coisa que você acha tão importante, eu achei tão obcecado quando era a primeira vez que lidais. E se não sou obcecado, é",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+
+# Virtual environments
+venv/
+env/
+.env
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Model weights and adapters (too large for git)
+experiments/fine-tuning/output/
+experiments/fine-tuning/venv/
+
+# But we want to track the top-level metrics files
+!experiments/fine-tuning/output/training_metrics.json
+
+# Logs are OK (small)
+# *.log  # keep logs for history
+
+# Large datasets that can be regenerated
+experiments/fine-tuning/dataset_sharegpt.json
+experiments/fine-tuning/dataset_alpaca.json
+experiments/fine-tuning/dataset_sharegpt_filtered.json
+experiments/fine-tuning/dataset_alpaca_filtered.json
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# mcp-memory venv
+mcp-memory/venv/

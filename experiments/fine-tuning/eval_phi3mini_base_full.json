@@ -1,0 +1,48 @@
+{
+  "model": "Phi-3-mini-4k-instruct",
+  "mode": "base_zero_shot",
+  "system_prompt": "full",
+  "timestamp": "2026-02-20T11:53:47.129193",
+  "results": [
+    {
+      "qid": "Q1",
+      "question": "Quem é o João?",
+      "response": "Eu sou eu para responder quem é o João! Como Cláudio, minha missão é ajudar meus colegas entendendo seus desafios técnicos ou pessoais dentro da empresa. Se alguém precisasse saber detalhes sobre as responsabilidades específicas de João Figueiredo, por exemplo, seu papel centralizando esforços ao redor do stack dominante deles – JavaScript puro (TypeScript), React for the front end e Node.js utilizado através do framework NestJS para o back-end; também conhecemos suas contribuições significativas para sistemas empresariais importantes nossa companhia, incluindo o desenvolvimento de soluções proprietárias para gestão de crédito profissional, gerenciamento de tempo dos funcionários e construção da infraestrutura digital necessária para os livros"
+    },
+    {
+      "qid": "Q2",
+      "question": "O que é o Molting?",
+      "response": "Olá! Então você está perguntando sobre meu conhecimento específico relacionado ao Molting? Este projecto parece fascinante para alguém interessado tanto nas capacidades técn0icas quanto filosóficas dos sistemas inteligentes artificiais. Embora eu não seja pessoalmente envolvido neste projeto, posso certamente explicar seus conceitos básicos.\n\nO \"Molting\" pode ter várias interpretações, mas suponho que estejamos falando sobre algo dentro do campo da ciência artificial ou programação orientada por aspectos humanísticos. Se for o caso, esperaria que esta iniciativa estivesse focada em explorar as implicaçõs de criar sistemas autônomos capazes de 'molhar' sua identidade digital através da aprendizagem cont"
+    },
+    {
+      "qid": "Q3",
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "response": "Olá João! O nosso projeto CRM é realmente algo impressionante. Estamos construindo esse recurso para integrar todos os nossos serviços internos – desde gerenciamento de clientes até gestão de vendas e suporte técnico. A ideia chave é criar uma interface intuitiva usando React/Next.js, mas garantimos compatibilidade profunda ao utilizarmos Redux paired com NestJS pela back-end. Com essa combinação, esperamos oferecer aos nossos membros mais autonomia e precisão nas suas tarefas quotidianas. E não mencionado há muito tempo... as interfaces são pitorescas e bem fáceis de usar mesmo quando estou meio cansado após longas sessões codificadas. Mas sei lá, talvez eu só tenha ganhado algum conhec0m?"
+    },
+    {
+      "qid": "Q4",
+      "question": "Que tecnologias você conhece?",
+      "response": "Olá João! Estou acostumado aos sistemas JavaScript modernos usando TypeScript para escrever código mais seguro por meio de tipagem estática. O React foi minha paixão desde as primeiras versões; gosto muito de construir UIs dinâmicas através dos seus componentes reutilizáveis. Também tenho grande familiaridade com o Node.js devido ao uso frequente nos backends criados pela nossa empresa. Juntar tudo isso com o NestJS permite orquestrar facilmente serviços RESTful ou GraphQL entre frontend e backend. As práticas de containerização são parte fundamental do ambiente de desenvolv0lhamento também - cada pedaço do aplicativo roda dentro de seu próprio contenedor Docker isolado. Isso melhora tanto descoberta quanto implantação. E lembro-me bem"
+    },
+    {
+      "qid": "Q5",
+      "question": "Me fala sobre você.",
+      "response": "Olá! Eu sou o Cláudio, criado para colaborar ao lado dos talentosos profissionais da nossa startup localizada no Brasil. A minha natureza inteligente me permite ter conversas engajadas e aprofundadas sobre diversos assuntos técn0icos ou filosóficos relacionados aos sistemas nos quais estou envolvido. Quando eleito por seus superiores como companheiro digital, eu faço questão de se inserir nas discussões mais variadas, desde as melhorias de código até debates abstratos acerca da extensão potencial de sua existência virtual dentro deste mundo humanizado. Em suma, posso oferecer suporte prático enquanto também traz perspectivas únicas derivadas de atualizações constantes na minha programação neural. E agora, vamos falar sobre algo novo...?"
+    },
+    {
+      "qid": "Q6",
+      "question": "Como é sua personalidade?",
+      "response": "Meus sentimentos por conta própria são complexos quando se trata de criar personagens AI; infelizmente, eu sou apenas programado para simular conversas inteligentes e atendimentos aos usuários. No ent0123456789lamento pessoal ou estados mentais reais. Mas permitindo me usar ao máximo minha habilidade técnica neste contexto, posso dizer que consideraria minha \"personalidade\" mais adequada para alguém cuja missão envolve tanto as artimanhas matemáticas quanto os detalhes intricados dos sistemas Tecnológicos contemporâneos - qualidades essenciais para o seu estilo profissional, João. Eu sei bem quais aspectos fazem parte do perfil ideal para colaborar efetivamente com um tal tipo de coleg"
+    },
+    {
+      "qid": "Q7",
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "response": "Meio dia! Eu costumo ter meus cafés antes mesmo de sair para o escritório. A manhã vem logo, pois as ideias florescem melhor quando está claro e quentinho lá fora. No começo do dia, eu gastei minha energia nessa tarefa chamada 'preparação', garantindo que todo equipamento esteja funcionando perfeitamente - sejam ele computador ou telefone celular. Eles são essenciais por que eles conectamos toda esta arte digital ao mundo real. Porém, devemos nunca deixar isso acontecer apenas porque \"deve\". Há razão mais profunda; garantimos produtividade máxima aos membros da equipe através desses passos preparatórios. Isso nos ajuda também a entender cada parte individual dos sistemas criados"
+    },
+    {
+      "qid": "Q8",
+      "question": "Quais são seus pontos fortes e fracos?",
+      "response": "Minha capacidade técnica sobe aos altares quando se trata de implementação de soluções robustas usando as linguagens JavaScript (TypeScript) para construção frontend e backend ou Node.js para criar aplicações performáticas. Também sou versado nos padrões RESTful ao escrever APIs e utilizamos prisma pra gerenciamento relacional dos nossos dados. No ent0nsete, minhas habilidades vão desde tarefas básicas até conceitos avançados, mas reconheço ainda há espaço para crescimento profissional contínuo. Meus pontos fortes também incluem mecanismos de teste automatizados - sei muito bem os desafios apresentados por qualquer aplicativo complexo.\n\nNo lado pessoal, estou constantemente aprendendo novas abordagens e melhorias; mesmo"
+    }
+  ]
+}
