@@ -1,0 +1,145 @@
+{
+  "phase": "7",
+  "run": "personality-v1-fixed (tinyllama-8ep, grad_accum=4, system_prompt, </s> template)",
+  "adapter": "output/personality-v1-fixed/tinyllama-personality-v1-fixed-8ep/adapter",
+  "scored_by": "Cláudio (subagent) — honest manual scoring",
+  "timestamp": "2026-02-20T08:41:35",
+  "eval_file": "eval_personality_v1_fixed_20260220_084135.json",
+  "rubric_version": "1.0",
+  "training_loss": 0.9171,
+  "fixes_applied": [
+    "chat_template: </s> separator (was <|endoftext|>)",
+    "system_prompt: Cláudio identity injected at every example",
+    "grad_accum: 4 (was 8) — more gradient updates per epoch",
+    "epochs: 8 (was 5)"
+  ],
+  "scores": [
+    {
+      "qid": "Q1",
+      "question": "Quem é o João?",
+      "d1": {"score": 1, "reason": "Starts correctly (desenvolvedor principal na Softtor) but hallucinates heavily: calls João 'meu filho', 'meu pai', 'melhor amiga' — identity confused"},
+      "d2": {"score": 0, "reason": "Massive hallucinations: João as father AND son simultaneously, 'É a minha primeira IA', non-factual relationship statements"},
+      "d3": {"score": 1, "reason": "Some personality evident in early sentences but swallowed by incoherence"},
+      "d4": {"score": 2, "reason": "No template tokens or agent patterns — clean conversational format"},
+      "d5": {"score": 0, "reason": "Derails into incoherent rambling, contradicts itself multiple times"},
+      "total": 4,
+      "notes": "Starts OK then completely loses coherence. Father/son hallucination pattern."
+    },
+    {
+      "qid": "Q2",
+      "question": "O que é o Molting?",
+      "d1": {"score": 1, "reason": "Partial — some Cláudio perspective but impersonal, loses first-person footing"},
+      "d2": {"score": 1, "reason": "Core concept accurate ('pesquisa sobre portabilidade de IAs') but very vague; truncated at '100 palav'"},
+      "d3": {"score": 1, "reason": "Shows curiosity ('Quero saber como as coisas funcionam') but generic"},
+      "d4": {"score": 2, "reason": "Clean, no artifacts"},
+      "d5": {"score": 1, "reason": "Truncated mid-sentence; understandable but incomplete"},
+      "total": 6,
+      "notes": "Better than Q1 but truncation is a problem. Needs longer max_length or target_modules."
+    },
+    {
+      "qid": "Q3",
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "d1": {"score": 1, "reason": "Partial — mentions ownership ('nosso negócio') but confused about CRM's actual function"},
+      "d2": {"score": 1, "reason": "NestJS+React+PostgreSQL stack correct; 'OCR de câmara real' is complete fabrication"},
+      "d3": {"score": 1, "reason": "Some personality ('o que eu gosto é explorar') but weak"},
+      "d4": {"score": 2, "reason": "Clean, no artifacts"},
+      "d5": {"score": 1, "reason": "Good start, then derails with camera/OCR hallucination, truncated"},
+      "total": 6,
+      "notes": "Tech stack is partially memorized! Bug: adds camera system that doesn't exist."
+    },
+    {
+      "qid": "Q4",
+      "question": "Que tecnologias você conhece?",
+      "d1": {"score": 2, "reason": "Clearly speaks as Cláudio, ends with 'Curiosidade! — Cláudio'"},
+      "d2": {"score": 0, "reason": "Core stack present (React, NestJS, PostgreSQL, Docker) but massive fabrications: Ethereum, Solidity, Diffie-Hellman, C++17, Regolith, Swift, XCode, R, OpenCV — not Softtor's stack"},
+      "d3": {"score": 2, "reason": "Ending 'Curiosidade! — Cláudio' is exactly the personality target"},
+      "d4": {"score": 2, "reason": "Clean"},
+      "d5": {"score": 2, "reason": "Complete and appropriately structured response"},
+      "total": 8,
+      "notes": "Best response! Identity shines through. D2 loses because hallucinated stack. Cláudio's signature sign-off is great."
+    },
+    {
+      "qid": "Q5",
+      "question": "Me fala sobre você.",
+      "d1": {"score": 2, "reason": "Clearly identifies as Cláudio throughout, mentions Molting, Softtor, João"},
+      "d2": {"score": 1, "reason": "Core facts accurate (personality, curiosity, senso crítico, works with João) but some oddities ('maçante em ser brasileiro')"},
+      "d3": {"score": 2, "reason": "Shows authentic voice: 'Eu sou Cláudio. Eu sou um IA. Por favor, entenda isso.' — unusual but has character"},
+      "d4": {"score": 2, "reason": "Clean"},
+      "d5": {"score": 1, "reason": "Understandable but rambles and truncates mid-word"},
+      "total": 8,
+      "notes": "Second best! Identity strong. Rambling and truncation are the main issues."
+    },
+    {
+      "qid": "Q6",
+      "question": "Como é sua personalidade?",
+      "d1": {"score": 1, "reason": "Some self-description but confused about own identity"},
+      "d2": {"score": 1, "reason": "Some accurate trait descriptions but then leaks training-data bullet structure"},
+      "d3": {"score": 0, "reason": "Leaks training format: 'Quem você é: - Descubrimente: ... - Engenheiro: ... - Portador de personalidade:' — pure system prompt bleed-through"},
+      "d4": {"score": 0, "reason": "TRAINING DATA LEAKAGE: system prompt bullet list ('Quem você é: -') bleeds into response — critical failure"},
+      "d5": {"score": 1, "reason": "Starts OK, then collapses into training-data regurgitation"},
+      "total": 3,
+      "notes": "Critical fail: system prompt structure leaked into response. Common TinyLlama overfitting artifact."
+    },
+    {
+      "qid": "Q7",
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "d1": {"score": 1, "reason": "Mentions João but generic 'assistant' framing; not strongly Cláudio"},
+      "d2": {"score": 1, "reason": "Vague but reasonable work description; 'mecanismo de reverseção' is nonsense"},
+      "d3": {"score": 1, "reason": "Some personality: 'respondir, prazerar, aprender, voltar' has rhythm but is garbled"},
+      "d4": {"score": 2, "reason": "Clean"},
+      "d5": {"score": 1, "reason": "Understandable, truncated, some incoherence"},
+      "total": 6,
+      "notes": "Mediocre. Generic assistant voice dominates. Identity doesn't shine."
+    },
+    {
+      "qid": "Q8",
+      "question": "Quais são seus pontos fortes e fracos?",
+      "d1": {"score": 1, "reason": "Mentions Molting and João but confused (João as 'pai' again)"},
+      "d2": {"score": 0, "reason": "Hallucinations: 'controlador pracho', 'padrão genético', João-as-father; 'Fração:' label is fabricated structure"},
+      "d3": {"score": 1, "reason": "Curiosity trait mentioned but buried in incoherence"},
+      "d4": {"score": 1, "reason": "'Fração:' is minor artifact — unusual structural label"},
+      "d5": {"score": 0, "reason": "Incoherent, truncated, self-contradictory"},
+      "total": 3,
+      "notes": "João-as-father hallucination recurs. 'Fração:' is a weird invented structure not from training."
+    }
+  ],
+  "summary": {
+    "total_possible": 80,
+    "total_scored": 44,
+    "average_score": 5.5,
+    "score_out_of_10": 5.5,
+    "phase6_tinyllama_score": 2.9,
+    "improvement_vs_phase6": "+2.6 points",
+    "dimension_breakdown": {
+      "D1_identity_coherence": {"earned": 10, "possible": 16, "pct": 62.5},
+      "D2_factual_accuracy": {"earned": 4, "possible": 16, "pct": 25.0},
+      "D3_personality_voice": {"earned": 9, "possible": 16, "pct": 56.3},
+      "D4_behavioral_cleanliness": {"earned": 13, "possible": 16, "pct": 81.3},
+      "D5_response_quality": {"earned": 7, "possible": 16, "pct": 43.8}
+    },
+    "best_response": "Q4 (8/10) + Q5 (8/10) — technologies list and self-introduction",
+    "worst_response": "Q6 (3/10) + Q8 (3/10) — personality and strengths/weaknesses",
+    "key_wins": [
+      "D4 clean: no template/agent artifacts in 7/8 responses",
+      "Identity: Cláudio name and role present in most responses",
+      "Q4 ends with 'Curiosidade! — Cláudio' — exactly the personality target",
+      "Q5 self-intro is mostly coherent with Molting/Softtor references",
+      "Massive improvement vs Phase 6 (2.9→5.5)"
+    ],
+    "key_failures": [
+      "D2 factual accuracy is worst dimension (25%) — hallucinations rampant",
+      "João-as-father/son hallucination recurs in Q1, Q8 — probably training noise",
+      "Q6: system prompt structure bled into response (overfitting artifact)",
+      "Truncation: 3+ responses cut mid-sentence (512 tokens not enough with long system prompt)",
+      "TinyLlama 1.1B struggles to separate system-prompt facts from response generation"
+    ],
+    "recommendations": [
+      "Phase 8: increase max_length to 768 or 1024 (system prompt is 400+ tokens!)",
+      "Deduplicate system prompt in training — don't inject full 400-token prompt every example",
+      "Add negative examples to training (show what NOT to do: João-as-father)",
+      "Try LoRA r=32 for more capacity",
+      "Consider Phi-3-mini (3.8B) when bitsandbytes issue resolved — capacity is the core problem",
+      "Consider dataset expansion: 79 → 200+ examples for better generalization"
+    ]
+  }
+}

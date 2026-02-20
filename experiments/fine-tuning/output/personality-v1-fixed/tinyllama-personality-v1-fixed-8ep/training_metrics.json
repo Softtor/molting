@@ -1,0 +1,26 @@
+{
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "model_key": "tinyllama",
+  "dataset": "dataset_personality_v1.json",
+  "num_examples": 79,
+  "epochs": 8,
+  "learning_rate": 0.0001,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "effective_batch_size": 4,
+  "final_loss": 0.9171052485704422,
+  "vram_peak_gb": 1.53726464,
+  "adapter_path": "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/output/personality-v1-fixed/tinyllama-personality-v1-fixed-8ep/adapter",
+  "timestamp": "2026-02-20T08:41:26.579489",
+  "run_label": "tinyllama-personality-v1-fixed-8ep",
+  "phase": "7",
+  "fixes": [
+    "chat_template: </s> separator (was <|endoftext|>)",
+    "system_prompt: Cláudio identity injected",
+    "grad_accum: 4 (was 8)",
+    "epochs: 8 (was 5)",
+    "max_length: 512 (was 384)"
+  ]
+}

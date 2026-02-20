@@ -1,35 +1,86 @@
-# Known Issues — Fine-tuning Environment
+# Known Issues — Fine-tuning Experiments
 
-## Issue: Phi-3-mini Inference OOM with transformers 5.x + BNB 0.49
+## Status as of Phase 7 (2026-02-20)
 
-**Status:** Open  
-**Versions:** transformers 5.1.0 + bitsandbytes 0.49.1  
-**GPU:** RTX 3050 4GB  
+---
+
+## Issue 1: Phi-3-mini inference OOM on 4GB GPU (Partially resolved)
+
+### Root Cause (Phase 7 diagnosis)
+Two separate issues were blocking Phi-3-mini inference:
+
+**Issue 1a: rope_scaling KeyError (FIXED)**
+- Old cached modeling_phi3.py expected `rope_scaling["type"]`
+- New HuggingFace config uses `rope_scaling["rope_type"]` format
+- Fix: patched `~/.cache/huggingface/modules/.../modeling_phi3.py`
+  - Changed `self.config.rope_scaling["type"]` to `.get("type") or .get("rope_type", "default")`
+  - Added handling for `"default"` rope_type → use standard Phi3RotaryEmbedding
+
+**Issue 1b: transformers 5.x materialization OOM (ACTIVE)**
+- transformers 5.x uses new `core_model_loading.py` with threaded tensor materialization
+- This path bypasses bitsandbytes 4-bit quantization hooks (which worked in transformers 4.x)
+- Result: model materializes in fp16 on CUDA → OOM on 4GB GPU for 3.8B model
+- TinyLlama (1.1B) is unaffected — small enough to load anyway
+- Phi-3-mini (3.8B) requires ~1.9GB at 4-bit but ~7.6GB at fp16
+
+### Fix Options (for Phase 8)
+1. **Downgrade transformers to 4.47.x** — `pip install transformers==4.47.0` (safest)
+2. **Use llama.cpp backend** — `ollama pull phi3` or direct GGUF inference
+3. **Load on CPU then convert to 4-bit** — but needs 7.6GB RAM
+4. **Wait for bitsandbytes compatibility update** — track HF issue tracker
+
+### Training Status
+- TinyLlama: ✅ Training works, eval works
+- Phi-3-mini: ✅ Training worked (Phase 6, transformers 4.x era), ❌ inference blocked
+
+---
+
+## Issue 2: TinyLlama 1.1B response quality ceiling
 
 ### Symptom
-Loading Phi-3-mini (3.8B) with `quantization_config=BitsAndBytesConfig(load_in_4bit=True)` fails 
-with CUDA OOM at ~52% of weight loading. OOM occurs in `core_model_loading.py:materialize_tensors()`.
+Phase 7 TinyLlama (fixed template, system prompt, 8 epochs): 5.5/10
+Phase 6 TinyLlama (broken template): 2.9/10
+Still failing on: factual accuracy (25%), response coherence (43%)
 
 ### Root Cause
-Transformers 5.x rewrote the model loading backend (`core_model_loading.py`). The new 
-materialization pipeline does not correctly apply BnB 4-bit quantization layer-by-layer during loading.
-Instead, tensors are materialized in float16 (2 bytes/param) before quantization, requiring:
-- 3.8B × 2 bytes ≈ 7.6 GB VRAM  
-- Available: 3.8 GB → OOM at ~52%
+1.1B parameters insufficient for maintaining identity + factual accuracy simultaneously
+Notable failures:
+- "João as father/son" hallucination (confused relationship)
+- System prompt structure bleeding into responses (Q6 — overfitting artifact)
+- Truncation at 512 tokens (system prompt takes ~400 tokens itself!)
 
-Training works because it uses a different code path:
-- `prepare_model_for_kbit_training()` uses older gradient checkpointing integration
-- Training peak: 3.31 GB (working within 3.8 GB)
+### Fix Options (Phase 8)
+1. **max_length: 512 → 1024** (system prompt alone is ~400 tokens)
+2. **Shorter system prompt** — summarize to ~100 tokens, keep full prompt as context only
+3. **Phi-3-mini** (3.8B) once inference is unblocked — primary solution
+4. **Negative examples** in dataset — show wrong João descriptions to counteract hallucination
+5. **LoRA r=32** for more capacity (current: r=16)
+6. **Dataset: 79 → 200+ examples** for better generalization vs memorization
 
-### Workaround
-- Use TinyLlama (1.1B) for inference — loads fine (0.82 GB with 4-bit)
-- For Phi-3-mini: downgrade transformers to 4.x or use CPU-only inference (7.6 GB RAM needed)
-- Or: wait for transformers 5.x + bitsandbytes compatibility fix
+---
 
-### Impact
-Cannot evaluate Phi-3-mini adapter quality via inference.
-**Mitigation:** Use training loss as quality proxy.
-- TinyLlama final loss: 2.47 (poor convergence)
-- Phi-3-mini final loss: 1.41 (better convergence, ~43% lower)
+## Issue 3: Chat template inconsistency (RESOLVED)
 
-The loss improvement strongly suggests Phi-3-mini adapter is better, but cannot confirm via rubric.
+### What was wrong
+Phase 6 training used `<|endoftext|>` as separator instead of TinyLlama's correct `</s>`.
+This caused the model to learn from a malformed format, degrading all responses.
+
+### Resolution (Phase 7)
+- Fixed `format_sharegpt_fixed()` to use `</s>` as EOS separator
+- Verified format: `<|system|>\n{sys}</s>\n<|user|>\n{q}</s>\n<|assistant|>\n{a}</s>`
+- Training loss improved: previous run unknown, Phase 7: 0.9171
+
+---
+
+## Summary Table
+
+| Issue | Status | Phase |
+|-------|--------|-------|
+| Chat template `<\|endoftext\|>` → `</s>` | ✅ Fixed | 7 |
+| System prompt missing during training | ✅ Fixed | 7 |
+| grad_accum 8→4 | ✅ Fixed | 7 |
+| Epochs 5→8 | ✅ Fixed | 7 |
+| rope_scaling KeyError (Phi-3 cached code) | ✅ Fixed | 7 |
+| transformers 5.x OOM for Phi-3 inference | ❌ Active | 7 |
+| TinyLlama quality ceiling (1.1B capacity) | ⚠️ Mitigated | 7 |
+| max_length too small (512, sys prompt=400) | ❌ Active | 7 |
