@@ -1,0 +1,18 @@
+{
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "model_key": "tinyllama",
+  "dataset": "dataset_personality_v1.json",
+  "num_examples": 79,
+  "epochs": 5,
+  "learning_rate": 0.0001,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "effective_batch_size": 8,
+  "final_loss": 2.4701324462890626,
+  "vram_peak_gb": 1.461134848,
+  "adapter_path": "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/output/personality-v1/tinyllama-personality-v1-5ep/adapter",
+  "timestamp": "2026-02-19T22:11:49.336009",
+  "run_label": "tinyllama-personality-v1-5ep"
+}

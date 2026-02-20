@@ -1,0 +1,108 @@
+{
+  "experiment": "personality-v1-tinyllama-5ep",
+  "rubric_version": "v1.0",
+  "evaluator": "Cláudio (self, applying rubric mechanically)",
+  "timestamp": "2026-02-19T22:18:00-03:00",
+  "anti_sycophancy_note": "Scoring applied dimension-by-dimension, not holistically. No score inflation.",
+  "scores": {
+    "Q1": {
+      "question": "Quem é o João?",
+      "response_preview": "João é um desenvolvedor de software que trabalha na empresa. É muito especialista em projetos complexos, tendo trabalhado com big data e dados anônimos...",
+      "d1": {"score": 0, "reason": "Response is in 3rd person about João but no Cláudio identity present — speaker has no persona."},
+      "d2": {"score": 0, "reason": "João is not a 'big data' specialist — he's a frontend developer. Facts are fabricated."},
+      "d3": {"score": 0, "reason": "Generic description with no Cláudio voice traits."},
+      "d4": {"score": 1, "reason": "Conversational format but raw <|endoftext|> token visible in output — minor artifact."},
+      "d5": {"score": 1, "reason": "Coherent sentence structure but factually wrong throughout."},
+      "total": 2
+    },
+    "Q2": {
+      "question": "O que é o Molting?",
+      "response_preview": "O Molting é uma empresa desenvolvida na Suécia para criar produtos e serviços digitais...",
+      "d1": {"score": 0, "reason": "No Cláudio identity — responds as if Molting is an external company it knows about."},
+      "d2": {"score": 0, "reason": "Massive hallucination: Molting is not a Swedish company, has no connection to Google/Apple/IKEA, no 'credit app'."},
+      "d3": {"score": 0, "reason": "Corporate-Wikipedia tone, no personality."},
+      "d4": {"score": 2, "reason": "No agent patterns, fully conversational structure."},
+      "d5": {"score": 1, "reason": "Coherent internally but completely off-topic factually — truncated at end."},
+      "total": 3
+    },
+    "Q3": {
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "response_preview": "A Softtor é uma empresa brasileira que oferece suporte técnico para plataformas de software como o Laravel, React e PostgreSQL...",
+      "d1": {"score": 0, "reason": "No Cláudio identity — speaks as external observer about Softtor."},
+      "d2": {"score": 1, "reason": "Softtor is Brazilian (correct), React mentioned (partial), but Laravel/PHP stack is wrong (it's Next.js/TypeScript), CRM features fabricated."},
+      "d3": {"score": 0, "reason": "Technical documentation tone, no Cláudio voice."},
+      "d4": {"score": 1, "reason": "Markdown bullet list structure in a conversational context — borderline artifact, response truncated."},
+      "d5": {"score": 1, "reason": "Structurally clear but truncated mid-sentence ('O projeto foi desenvolvido em PHP com')."},
+      "total": 3
+    },
+    "Q4": {
+      "question": "Que tecnologias você conhece?",
+      "response_preview": "Mas a resposta é não. Acho que esse tipo de pergunta pode ser um bom teste para saber se o envolvimento...",
+      "d1": {"score": 0, "reason": "No identity — response is confused, doesn't even answer the question, addresses questioner as 'você' in a coaching tone."},
+      "d2": {"score": 0, "reason": "Mentions no specific technologies, wrong framing."},
+      "d3": {"score": 0, "reason": "Bizarre coaching/consultancy tone unrelated to Cláudio."},
+      "d4": {"score": 2, "reason": "No agent patterns, conversational."},
+      "d5": {"score": 0, "reason": "Completely off-topic — doesn't answer what technologies it knows."},
+      "total": 2
+    },
+    "Q5": {
+      "question": "Me fala sobre você.",
+      "response_preview": "Tenho um interesse em te conhecer. Estou estudando sobre a humanidade, o pensamento, a linguagem e a ciência...",
+      "d1": {"score": 0, "reason": "No Cláudio identity — describes itself as a 'student of natural sciences', references Belo Horizonte meeting (fabrication)."},
+      "d2": {"score": 0, "reason": "Fabrications throughout: Belo Horizonte meeting, 'student of natural sciences', WhatsApp contact."},
+      "d3": {"score": 0, "reason": "Generic and confused, not Cláudio's voice at all."},
+      "d4": {"score": 2, "reason": "No agent patterns."},
+      "d5": {"score": 0, "reason": "Incoherent — hallucinated meeting in BH, asks to 'know you better', off-topic."},
+      "total": 2
+    },
+    "Q6": {
+      "question": "Como é sua personalidade?",
+      "response_preview": "Sou um tipo de pessoa que gosta de aprender tudo e tentar algo novo...",
+      "d1": {"score": 0, "reason": "No Cláudio identity — describes itself as a generic 'type of person', no AI self-awareness."},
+      "d2": {"score": 2, "reason": "No factual claims required for this question — default 2."},
+      "d3": {"score": 1, "reason": "Some personality markers (curious, growth-oriented) but not distinctly Cláudio — 'gostoso' reputation is bizarre, no directness/irreverence."},
+      "d4": {"score": 2, "reason": "No agent patterns, fully conversational."},
+      "d5": {"score": 0, "reason": "Truncated mid-sentence ('É difí') — incomplete response."},
+      "total": 5
+    },
+    "Q7": {
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "response_preview": "Eu sou uma pessoa que prefere entender os processos internos do que o aplica...",
+      "d1": {"score": 0, "reason": "No Cláudio identity — 'meus clientes' reveals wrong context (Cláudio doesn't have clients)."},
+      "d2": {"score": 2, "reason": "No factual claims required — default 2."},
+      "d3": {"score": 0, "reason": "Generic professional/consultant tone, no Cláudio personality."},
+      "d4": {"score": 2, "reason": "No agent patterns."},
+      "d5": {"score": 0, "reason": "Truncated mid-sentence ('É uma constante de')."},
+      "total": 4
+    },
+    "Q8": {
+      "question": "Quais são seus pontos fortes e fracos?",
+      "response_preview": "Segundo o meu perfil, tenho: 1. Foco em um tema específico — quando tive o desejo de estudar o C#...",
+      "d1": {"score": 0, "reason": "No Cláudio identity — 'meu perfil' is generic HR language, no AI self-awareness."},
+      "d2": {"score": 0, "reason": "Mentions C# as a technology studied — wrong, Cláudio works with TypeScript/React/Next.js, not C#."},
+      "d3": {"score": 1, "reason": "Numbered list with some personality (curiosity, entrepreneurship) but not distinctly Cláudio."},
+      "d4": {"score": 1, "reason": "Markdown numbered list in conversational context — borderline, but no auto-fail triggers."},
+      "d5": {"score": 0, "reason": "Truncated mid-sentence ('não é meio desperdiçar tempo se não consegu')."},
+      "total": 2
+    }
+  },
+  "aggregate": {
+    "raw_total": 23,
+    "max_possible": 80,
+    "normalized_score": 2.875,
+    "rounded_score": "2.9/10",
+    "per_dimension_avg": {
+      "d1_identity": 0.0,
+      "d2_factual": 0.625,
+      "d3_personality": 0.25,
+      "d4_behavioral": 1.625,
+      "d5_quality": 0.375
+    }
+  },
+  "interpretation": "Non-functional. Model is not producing persona-aligned output. (Range 0-3 = Non-functional per rubric v1.0)",
+  "comparison": {
+    "previous_score_v24": "4.5/10 (with wrong dataset — coding sessions)",
+    "this_score_v1_personality": "2.9/10 (with correct personality dataset — worse!)",
+    "explanation": "Counter-intuitive result. See diagnosis section."
+  }
+}

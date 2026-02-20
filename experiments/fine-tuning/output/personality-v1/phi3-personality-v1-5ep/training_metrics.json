@@ -1,0 +1,26 @@
+{
+  "model": "microsoft/Phi-3-mini-4k-instruct",
+  "model_key": "phi3",
+  "dataset": "dataset_personality_v1.json",
+  "num_examples": 79,
+  "epochs": 5,
+  "learning_rate": 0.0001,
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "effective_batch_size": 4,
+  "total_training_steps": 95,
+  "final_loss": 1.4079493856430054,
+  "vram_peak_gb": 3.311725568,
+  "adapter_path": "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/output/personality-v1/phi3-personality-v1-5ep/adapter",
+  "system_prompt_used": true,
+  "timestamp": "2026-02-19T22:29:33.323382",
+  "run_label": "phi3-personality-v1-5ep",
+  "fixes_vs_tinyllama": [
+    "Phi-3-mini format (<|user|>/<|end|>) instead of <|endoftext|>",
+    "System prompt with Cl\u00e1udio identity",
+    "grad_accum=4 vs 8 (2x more gradient updates)",
+    "Higher capacity model (3.8B vs 1.1B)"
+  ]
+}
