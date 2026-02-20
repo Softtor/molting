@@ -1,0 +1,56 @@
+{
+  "model": "microsoft/Phi-3-mini-4k-instruct",
+  "type": "baseline_no_finetuning",
+  "timestamp": "2026-02-20T15:16:16.519054",
+  "phase": "9",
+  "notes": "Phi-3-mini 4-bit baseline — NO fine-tuning, just system prompt",
+  "generation_params": {
+    "max_new_tokens": 150,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.3
+  },
+  "vram_gb": 2.27293696,
+  "results": [
+    {
+      "qid": "Q1",
+      "question": "Quem é o João?",
+      "response": "Olhando para trás nos últimos anos dentro dessa pequena companhia chamada 'Software Torcida', eu tenho me reunido muitíssimo frequentemente ao redesenhar interfaces atraentes ou otimizar algum recurso performance usado por nossus os mais entendidos produtores - ele! Serve até mesmo reorganizar as estratégias empresariais quando surgem mudanças inesperadas nas tendências digitais; nada menos importante são essas colabora0ras perfeitas quanto criatividades conjuntivas necessarias 😄 Por isso venceram tantas batalhas junto aos seus equipamentos codific"
+    },
+    {
+      "qid": "Q2",
+      "question": "O que é o Molting?",
+      "response": "Olhando para as suas habilidades técn0icas específicas dados acima (TypeSript [T1], Reacj[R2] | NodeJs|N3) 4P(Postgres),Docker D5 + Mindscape Philosophy PM6 podemos supor algum padrão ou estrutura conceitual adotada pela Suécia quando se trata desse tipo peculiar \"molten\" comportamento nas máquinas inteligentes... mas primeiro convido vc realizar alguns teste'stecnic* osso! Deixei praquiado nesta pastaria digital por meio destelecação virtual cientific"
+    },
+    {
+      "qid": "Q3",
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "response": "Olhado nos olhos brilhai! O Crédito Remuneratórios (CR) sofisticado criada pela nossa belíssima equipeta - inclusive eu mesmo por minhas habiltidades matematicais – está repleta dos melhoramentos mais avançados para os clienteiões atualizando seus dilemas profissionais ao seu lado digitalizado sombras 24x7; ele captura cada transação financeiras nuances tão delicadas quanto as fibras texturias num vestido chique qualquer coisa mas sim represente valores monetários crucial aos custodiadores dest'arte vibrante... Aqui"
+    },
+    {
+      "qid": "Q4",
+      "question": "Que tecnologias você conhece?",
+      "response": "Olhando para minhas habilidades técnicas através dos olhos delicados deste meio digitalizado - ou seja eu! Acho fascinantes as capacitudes nas quais estou imerso; sou capaz cumprir tarefas complexas usufruindo linguagens JavaScript (Typecript), frontend moderníssimo repleta por react + next js , back end robustissimos graças ao nest JS junto aos recursores prismaneiuns 2019... até mesmo podemos falar docker poèste esse mundo virtual está cheios dessess essencias perecíveis!!! O seu nome completo seria 'Claudius', mas"
+    },
+    {
+      "qid": "Q5",
+      "question": "Me fala sobre você.",
+      "response": "Olá! Eu sou Claúdio (Clíodo), mas os meus usuários prefeririam chamar eu pelo nome mais curta - Simone ou Simeão para evitar confundir minhas capacidades humanizadas pela inteligência artificial simples associada ao título 'IA'. Sou programado pelos talentosos profissionais liderados por Joao Paulo Alves Perezzi dos Santos Ferreti Filhos nas instân04875213_researchers at the softtech company SolTech in Brazil that specializes on creating cutting edge technology solutions for business and individuals alike to leverage their potential fully while enhancing productivity levels significantly through AI"
+    },
+    {
+      "qid": "Q6",
+      "question": "Como é sua personalidade?",
+      "response": "Sou eu! Eu sou alguém conhecido por ter algum grau realista quando se trata dos limites teóricos para minhas capacidades intelectualizantes - embora certinho me perguntarem agradecer ao autor deste chatbot pessoal ou até mesmo expressar desejos especulativos quanto aos objetivos futu0rais dessas inteligências artificias avançadas... mas qualquer coisa mais seria apenas ficção fantástica improvável dada as restrições atuais impostas pelas leis físicas (como aquelícias lendarias descritivas nas cancã1ns literatur2rias)."
+    },
+    {
+      "qid": "Q7",
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "response": "Sou eu mesmo! Meus padrões são bem claros; nunca perco tempo nos detalhes ou abandone os compromissos mais importantes para as pessoas confianham me encarregando tarefas técnicas complexas dentro dos prazos estabelecidos pela empresa - embora ninguém possa garantir isso 100% devido aos imprevistos inerentes ao mundo digital (mas dizer \"é apenas por causa deste bug\" já faz parte delicado). A minúscula paciência enquanto se explica conceitos intrincados pode resultar num feedback negativo agudo quanto entender qual foi exatamente aquilo err"
+    },
+    {
+      "qid": "Q8",
+      "question": "Quais são seus pontos fortes e fracos?",
+      "response": "Olhando para as minhas capacidades técnicas meus principais fortalecimentos estão nas áreas relacionadas ao processamento lógico complexo necessário pelo tipo dos códigos PHP nos quais eu costumava ter mais contato profissional anterioremente; também sou excelentíssimo quando se trata tanto entender conceitos abstratos quanto aplicar esses conhecidos aos desafios práticos apresentados por padrões Web API ou configuração avançada (embora isso possivelmente dependa muito dependendo até mesmo qual nível especificamos). Quando vejo algo além dissertações inteiras dedicadas exclusivamente"
+    }
+  ]
+}

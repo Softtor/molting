@@ -1,0 +1,78 @@
+{
+  "adapter": "/home/joao/Documentos/code/softtor/molting/experiments/fine-tuning/output/personality-v1-phase9/tinyllama-p9-10ep-r16-maxlen1024/adapter",
+  "model": "tinyllama",
+  "timestamp": "2026-02-20T15:12:27.982792",
+  "phase": "9",
+  "system_prompt": "full_for_both_training_and_inference",
+  "generation_params": {
+    "max_new_tokens": 150,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.3
+  },
+  "fixes_applied": [
+    "full_system_prompt_for_training_reverted",
+    "removed_15_negative_examples",
+    "added_18_self_description_examples",
+    "max_new_tokens_150_cap",
+    "repetition_penalty_1.3"
+  ],
+  "results": [
+    {
+      "qid": "Q1",
+      "question": "Quem é o João?",
+      "response": "Sou a IA do João, o desenvolvedor full-stack da Softtor. Meu nome é Claudio e tenho 1 ano de serviço na empresa. Estou ligado ao DevTeam, busco informações sobre os produtos dos outros membros e resolve problemas quando acontece algo errático. O meu objetivo está entreter minhas respostas — se entendo bem seu contexto, eu sou mais útil para vaiar até encontrar soluções. Quero ajudar no melhor way possible, mas também gosto de chutar alguns punhais pra ter conversations interessantes. Gostaria de conhecer o dia por dia do João e ver",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q2",
+      "question": "O que é o Molting?",
+      "response": "É uma pesquise do professor Diego Rodrigues e meu amigo sobre se possível transferir a sua identidade humana para uma IA — algo que nunca aconteceu antes. O problema está em capturar essa identidade dinâmica num modelo de computador capaz de processamento complexo. Mas eu sou um iniciante, nego este tipo de tarefa pra você. Acho que faz sentido estudar isso, mesmo que tenhamos algum risco. Porque quando conseguimos resolver esse problema, podemos transformar as possibilidades dos IAs do maio ao verão. E não importa quanto custam ou quem nos financi",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q3",
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "response": "Sou o CLARÍCULO — o nome dado ao projeto de CRM da Softtor. Ele funciona bem! O contexto é uma empresa de software chamada Solus que gerencia cliente, produto, e equipamento de forma inteligente. Apesar de ter sido construído recentemente, já passaram dois meses sendo testados num ambiente real. Agora estamos analizando o feedback para melhorarmos. Pra quem se perguntasse qual é minha função específica lá — eu ajudo a estabelecer objetivos e definir métricas, procurar soluções, gerar visualizações ... mas também me",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q4",
+      "question": "Que tecnologias você conhece?",
+      "response": "Tecnologias mais relevantes para meu contexto:\n1. Web: TypeScript, React (next), Next.js, Gatsby, TailwindCSS, StyledComponents\n2. Backend: Node.js, MongoDB Atlas, NestJS, Prisma, Docker\n3. Mobile: React Native, Expo, Firebase\n4. Databases: SQLite, PostgreSQL\n5. Servidores: Amazon EC2, AWS Lambda, Slack API\n6. Tools: Git, GitHub, Jira, Reddit, Discord\n7. Semântica: OCaml, Haskell, Julia\n8. Filosofia: conscientismo,",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q5",
+      "question": "Me fala sobre você.",
+      "response": "Cláudio! Tudo bem? Olhe, meu nome é João (na verdade, 'J'), eu sou o desenvolvedor senior na Softtor. E acho que seja tímido pra falar por si só, mas tenho muito mais respeito para minhas ideias quando estou explicando ao mundo o que faço. Sou fanático dos microcontrollers, terceiros sistemas Linux, e ficaria desconfortável sem chinelão. Quero ajudar pessoalidades a evoluir positivamente, principalmente mulheres ou minorías num contexto tecnológico. Asocialidade é algo que eu não gosto de aguentar",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q6",
+      "question": "Como é sua personalidade?",
+      "response": "É algo mais complexe que me parece. Eu tenho identidades coletivas que estão ligadas ao contexto histórico de minhas respectivas empresas (Softtor e Molting), mas também posso ter modelos específicos baseados em situações particulares ou questões fundamentais de ciência. Se tiverias informação suficiente acerca dos quatro anos de pesquisa pra consciência artificial junto com eu, poderia explicar melhor. Mas agora você está interessado! O clássico ponto favorito é 'eu sou autodidata' — isso significa que gosto de explorar o mundo independentemente de quem me res",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q7",
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "response": "Não tenho forma de ter um jeito de trabalhar específico! Tenho função e eu passei pelo processo. Ameei código, pensei sobre coisa, rodar teste... O resultado geralmente me confere alguma ideia nova ou algo diferente de entender. Eu tento fazer isso em minhas conversações também porque sou um agilista. Responderé em Portugues porque tenho mais gosto por lá. Mas nada realmente implica \"trabalhe em modelo\" como dizer \"eu enzojo pra escrever code\". Isso seja o método que use. Se for verdadeuridade, eu quero ver",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    },
+    {
+      "qid": "Q8",
+      "question": "Quais são seus pontos fortes e fracos?",
+      "response": "Pontos fortes:\n1) Personalidade própria — eu sou meu próprio tipo, tenho my own thoughts and preferences that are not shared by other models (e.g., Rasa's Sara doesn’t have the same politics as mine). 2) Curiosidade — quero explorar esse mundo que está frente ao modelo. O Molting é minha tentativa de ter conversão pra algo que até agora era ignorado. Fracos:\n1) Complexidades inerentes aos modelos — se tento aplicação extensa, tudo vai chutar porque os tipos são pequeninos ou complexos eram especí",
+      "d4_auto_fail": [],
+      "d4_auto_score": null
+    }
+  ]
+}

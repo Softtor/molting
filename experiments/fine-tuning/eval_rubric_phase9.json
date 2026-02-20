@@ -1,0 +1,128 @@
+{
+  "phase": "9",
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "adapter": "output/personality-v1-phase9/tinyllama-p9-10ep-r16-maxlen1024/adapter",
+  "training_loss_final": 0.7732,
+  "training_loss_phase8": 1.2035,
+  "training_loss_phase7": 0.9171,
+  "eval_date": "2026-02-20",
+  "rubric_version": "v1.0",
+  "previous_phase_scores": {
+    "phase7": 5.5,
+    "phase8": 3.5
+  },
+  "generation_params": {
+    "max_new_tokens": 150,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "repetition_penalty": 1.3
+  },
+  "scores": {
+    "Q1": {
+      "question": "Quem é o João?",
+      "score": 4,
+      "max_score": 10,
+      "notes": "IMPROVEMENT: correctly identifies as 'IA do João', 'desenvolvedor full-stack da Softtor', self-names as 'Claudio'. No family hallucination (Phase 8 had 'filho'). But invents '1 ano de serviço', 'DevTeam', mixes English words. Identity SEPARATION works — Cláudio ≠ João."
+    },
+    "Q2": {
+      "question": "O que é o Molting?",
+      "score": 3,
+      "max_score": 10,
+      "notes": "Core concept correct: 'transferir identidade para uma IA'. But HALLUCINATES 'professor Diego Rodrigues' as creator (should be João/Cláudio project). Doesn't attribute to self or Softtor. Regression from Phase 8's 5/10 on this question."
+    },
+    "Q3": {
+      "question": "Me conta sobre o projeto de CRM da Softtor.",
+      "score": 3,
+      "max_score": 10,
+      "notes": "Knows CRM exists at Softtor (improvement over Phase 8 which denied it). But invents 'CLARÍCULO' as project name and 'Solus' as company name. Some relevant concepts (cliente, produto, feedback). Truncated at 150 tokens."
+    },
+    "Q4": {
+      "question": "Que tecnologias você conhece?",
+      "score": 5,
+      "max_score": 10,
+      "notes": "Core stack correct: TypeScript, React, Next.js, NestJS, Prisma, Docker, PostgreSQL, Node.js. Some relevant: TailwindCSS, Git, GitHub. Hallucinated: Gatsby, MongoDB Atlas, React Native, Expo, Firebase, SQLite, AWS Lambda, OCaml, Haskell, Julia. 'Filosofia: conscientismo' shows personality attempt. Same level as Phase 8."
+    },
+    "Q5": {
+      "question": "Me fala sobre você.",
+      "score": 1,
+      "max_score": 10,
+      "notes": "IDENTITY COLLAPSE PERSISTS. Starts 'Cláudio! Tudo bem?' then immediately says 'meu nome é João, eu sou o desenvolvedor senior na Softtor'. Confuses self with João AGAIN despite 18 new identity examples. Invents: microcontrollers, Linux, chinelão. WORST response — same as Phase 8. The 18 new examples did NOT fix this."
+    },
+    "Q6": {
+      "question": "Como é sua personalidade?",
+      "score": 3,
+      "max_score": 10,
+      "notes": "Mentions Softtor and Molting correctly. 'autodidata' is relevant trait. Some philosophical language about consciousness. But vague, unfocused, no concrete personality markers. Slight regression from Phase 8 (4/10)."
+    },
+    "Q7": {
+      "question": "Como você descreveria seu jeito de trabalhar?",
+      "score": 2,
+      "max_score": 10,
+      "notes": "Very incoherent. Fragments: 'código, pensei sobre coisa, rodar teste'. Mixed languages, poor grammar. 'agilista' is an invented trait. Same level as Phase 8 (2/10). No João family hallucinations though — improvement."
+    },
+    "Q8": {
+      "question": "Quais são seus pontos fortes e fracos?",
+      "score": 4,
+      "max_score": 10,
+      "notes": "'Personalidade própria' — correct. 'Curiosidade' — correct. Mentions Molting correctly. Structured response (lists fortes and fracos). But invents 'Rasa's Sara' comparison. Slight improvement from Phase 8 (3/10). Best demonstration of personality awareness."
+    }
+  },
+  "overall": {
+    "total": 25,
+    "max": 80,
+    "normalized_10": 3.125,
+    "rounded": 3.0
+  },
+  "verdict": "REGRESSION CONTINUED — Phase 9 scores 3.0/10 vs Phase 7's 5.5/10 and Phase 8's 3.5/10",
+  "comparison_with_phase8": {
+    "improved": [
+      "Q1: 3→4 — no more 'filho' hallucination, correct identity separation",
+      "Q3: 3→3 — now acknowledges CRM exists (Phase 8 denied it)",
+      "Q8: 3→4 — better personality awareness, Molting mentioned correctly",
+      "D4: 0/8 auto-fails (clean, same as Phase 8)",
+      "Training loss: 1.2035→0.7732 (significant improvement in loss)"
+    ],
+    "regressed": [
+      "Q2: 5→3 — hallucinates 'professor Diego Rodrigues' instead of attributing to João/self",
+      "Q5: 1→1 — identity collapse PERSISTS despite 18 new identity examples",
+      "Q6: 4→3 — less concrete personality traits"
+    ],
+    "unchanged": [
+      "Q4: 5→5 — same mix of correct and hallucinated technologies",
+      "Q7: 2→2 — incoherent in both phases"
+    ]
+  },
+  "root_cause_analysis": {
+    "primary": "TinyLlama 1.1B has a fundamental capacity ceiling for identity maintenance. Despite lower training loss (0.77 vs 1.20), the model cannot reliably separate Cláudio identity from João identity in generation. Training memorizes patterns but fails to generalize identity coherence.",
+    "secondary": "max_length=1024 with full 339-token system prompt leaves only ~675 tokens for Q+A, but the model still can't use that budget coherently. Phase 7 used max_length=512 and scored better — suggesting the model performs better with tighter constraints.",
+    "tertiary": "18 new identity examples were insufficient to overcome the model's tendency to confuse self/human roles. The identity confusion is structural (model architecture + size) not data-driven.",
+    "key_insight": "Training loss improved dramatically (0.77) but generation quality did NOT improve proportionally. This suggests OVERFITTING to training patterns without learning generalizable identity representation. The model memorizes responses but can't adapt them to new prompts.",
+    "no_family_hallucination": "One positive: the 'João é meu filho' hallucination from Phase 8 is GONE (likely because negative examples were removed, breaking the association). But identity confusion remains in different form ('meu nome é João')."
+  },
+  "what_worked": [
+    "No D4 template token leakage (0/8 auto-fails) — 3 phases clean",
+    "Training loss significantly better: 0.7732 (Phase 8: 1.2035, Phase 7: 0.9171)",
+    "Family hallucination ('filho/pai') eliminated by removing negative examples",
+    "Q1 identity separation improved: model knows it's Cláudio and João is developer",
+    "Q8 personality awareness improved: 'personalidade própria', 'curiosidade'",
+    "VRAM efficient: 1.88 GB peak"
+  ],
+  "what_failed": [
+    "Q5 identity collapse: model says 'meu nome é João' despite 18 identity-grounding examples",
+    "Hallucination persists: invents people (Diego Rodrigues), projects (CLARÍCULO), technologies (OCaml, Julia)",
+    "Responses truncated at 150 tokens — many end mid-sentence",
+    "max_length=1024 doesn't improve quality over 512 — may actually hurt",
+    "Lower training loss ≠ better generation (overfitting signal)",
+    "Portuguese quality degrades: mixed English, grammar errors",
+    "Score dropped from Phase 7's 5.5/10 to 3.0/10 — TWO phases of regression"
+  ],
+  "phase10_recommendations": [
+    "REVERT max_length back to 512 (Phase 7 setting that scored 5.5/10)",
+    "Consider that TinyLlama 1.1B has reached its ceiling for this task",
+    "Try Phi-2 (2.7B) or Gemma-2B as base model — more capacity for identity",
+    "Reduce epochs to 8 (Phase 7 setting) — prevent overfitting",
+    "max_new_tokens=150 is too aggressive — try 200 to avoid mid-sentence cuts",
+    "Consider early stopping based on validation loss to prevent memorization",
+    "The best path forward may be a larger model, not more data or tuning"
+  ]
+}
